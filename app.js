@@ -130,6 +130,8 @@ const showroomItems = [
    ========================================================= */
 function init() {
   renderSolutions();
+  setupMobileSolutionCompact();
+  setupSingleSolutionCTAs();
   renderIndustries();
   renderScenario();
   renderMode();
@@ -179,7 +181,7 @@ function setupShowroomLightbox() {
     frame.src = data.preview;
     title.textContent = data.title;
     counter.textContent = `0${currentLightboxIndex + 1} / 0${showroomItems.length}`;
-    address.textContent = `preview.micropcexpress.local/${data.preview.split('/').pop().replace('.html','')}`;
+    address.textContent = `DEMO INTERACTIVA · MICROPCEXPRESS · ${data.preview.split('/').pop().replace('.html','').toUpperCase()}`;
     if (window.matchMedia('(max-width: 760px)').matches) stage.classList.add('mobile-mode');
     else stage.classList.remove('mobile-mode');
     modal.classList.add('open');
@@ -252,8 +254,13 @@ function setupTracking() {
 }
 
 function setupReveal() {
-  const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); o.unobserve(e.target); } }), { threshold: .1 });
-  $$('.reveal').forEach(x => o.observe(x));
+  const items = $$('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(x => x.classList.add('in'));
+    return;
+  }
+  const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); o.unobserve(e.target); } }), { threshold: .08, rootMargin: '120px 0px' });
+  items.forEach(x => o.observe(x));
 }
 
 function setupScroll() {
@@ -340,6 +347,55 @@ function renderSolutions() {
     b.classList.add('active');
     const f = b.dataset.filter;
     $$('.solution-card').forEach(c => c.classList.toggle('hide', f !== 'all' && c.dataset.cat !== f));
+    syncMobileSolutionCompact(f);
+  });
+}
+
+function setupMobileSolutionCompact() {
+  const grid = $('#solutionGrid');
+  const wrap = $('#solutionMoreWrap');
+  const btn = $('#solutionMore');
+  if (!grid || !wrap || !btn) return;
+
+  let expanded = false;
+  const apply = () => {
+    const mobile = matchMedia('(max-width:760px)').matches;
+    const activeFilter = $('#filters button.active')?.dataset.filter || 'all';
+    if (!mobile || activeFilter !== 'all') {
+      grid.classList.remove('mobile-compact');
+      wrap.hidden = true;
+      return;
+    }
+    wrap.hidden = false;
+    grid.classList.toggle('mobile-compact', !expanded);
+    btn.textContent = expanded ? 'MOSTRAR MENOS' : 'VER LAS 12 SOLUCIONES';
+    btn.setAttribute('aria-expanded', String(expanded));
+  };
+
+  btn.onclick = () => {
+    expanded = !expanded;
+    apply();
+    if (!expanded) $('#soluciones')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  window.addEventListener('resize', apply, { passive:true });
+  grid._syncCompact = (filter='all') => {
+    if (filter !== 'all') expanded = true;
+    else if (matchMedia('(max-width:760px)').matches) expanded = false;
+    apply();
+  };
+  apply();
+}
+
+function syncMobileSolutionCompact(filter='all') {
+  $('#solutionGrid')?._syncCompact?.(filter);
+}
+
+function setupSingleSolutionCTAs() {
+  $$('[data-open-solution]').forEach(card => {
+    const button = card.querySelector('button');
+    if (!button) return;
+    button.addEventListener('click', () => openExperience(card.dataset.openSolution));
   });
 }
 

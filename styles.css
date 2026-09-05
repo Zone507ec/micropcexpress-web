@@ -1002,3 +1002,73 @@ h1,h2,h3,h4,p,a,span{overflow-wrap:break-word}
   .menu-list span{font-size:clamp(21px,7vw,27px)}
   .menu-mobile-cta{min-height:46px;margin-bottom:10px}
 }
+
+/* =========================================================
+   V14 — COMMERCIAL OPTIMIZATION & PERFORMANCE
+   ========================================================= */
+
+/* Defer rendering of below-the-fold sections in supporting browsers. */
+.solutions,.industries,.before-after,.implementation,.pricing,.diagnosis,.closing-premium{
+  content-visibility:auto;
+  contain-intrinsic-size:900px;
+}
+
+/* Direct path for clients who only want one module. */
+.single-solution{
+  margin-top:34px;
+  padding:28px;
+  border-radius:28px;
+  background:linear-gradient(135deg,#0a202b,#102f3a);
+  color:#fff;
+  display:grid;
+  grid-template-columns:.7fr 1.3fr;
+  gap:24px;
+  align-items:start;
+  box-shadow:0 24px 70px rgba(7,26,35,.14);
+}
+.single-solution .eyebrow{color:var(--brass2)}
+.single-solution-copy h3{font-size:32px;line-height:1.05;letter-spacing:-.035em;margin:10px 0 12px}
+.single-solution-copy p{margin:0;color:#c6d4d9;font-size:14px;line-height:1.7}
+.single-solution-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.single-solution-grid article{padding:18px;border:1px solid rgba(255,255,255,.09);border-radius:20px;background:rgba(255,255,255,.045);display:grid;gap:8px}
+.single-solution-grid b{font-size:17px;color:#fff;letter-spacing:-.02em}
+.single-solution-grid span{font-size:12px;line-height:1.55;color:#b9c9cf}
+.single-solution-grid button,.single-solution-grid a{border:0;border-radius:10px;min-height:38px;padding:9px 11px;font-size:9px;font-weight:900;letter-spacing:.07em;cursor:pointer;text-align:center;display:grid;place-items:center}
+.single-solution-grid button{background:var(--brass2);color:#241805}
+.single-solution-grid a{border:1px solid rgba(255,255,255,.16);color:#eef4f5;background:rgba(255,255,255,.04)}
+.single-solution-grid button:hover,.single-solution-grid a:hover{transform:translateY(-1px)}
+
+.solution-more-wrap{display:none;text-align:center;margin-top:18px}
+.solution-more{border:1px solid var(--border);background:#fff;color:var(--navy);border-radius:999px;padding:12px 18px;font-size:10px;font-weight:900;letter-spacing:.08em;cursor:pointer;box-shadow:var(--shadow)}
+.nojs-note{margin-top:18px;padding:16px 18px;border-radius:16px;background:#fff8e8;border:1px solid #ecd79f;color:#634e1d;font-size:13px;line-height:1.6}
+
+/* Static fallback dots before JS hydrates the carousel. */
+.dots span{height:4px;width:20px;background:#c2d1da;border-radius:4px;display:block}
+.dots span.active{width:40px;background:var(--teal)}
+
+/* Make the demo nature explicit. */
+.preview-address span{color:var(--brass2);font-size:10px}
+.preview-address b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+@media(max-width:900px){
+  .single-solution{grid-template-columns:1fr}
+}
+
+@media(max-width:760px){
+  .solution-more-wrap:not([hidden]){display:block}
+  .solution-grid.mobile-compact .solution-card:nth-child(n+7){display:none!important}
+  .single-solution{margin-top:24px;padding:22px 18px;border-radius:22px;gap:18px}
+  .single-solution-copy h3{font-size:27px}
+  .single-solution-grid{grid-template-columns:1fr}
+  .single-solution-grid article{border-radius:16px;padding:16px}
+  .single-solution-grid button,.single-solution-grid a{min-height:42px}
+  .closing-premium{
+    background-image:linear-gradient(180deg,rgba(5,22,30,.98) 0%,rgba(5,22,30,.91) 55%,rgba(5,22,30,.22) 83%,rgba(5,22,30,.06) 100%),url('assets/cta-david-1280.webp')!important;
+  }
+}
+
+@media(min-width:761px) and (max-width:1100px){
+  .hero-premium:before{
+    background-image:linear-gradient(90deg,rgba(5,20,28,.99) 0%,rgba(5,20,28,.94) 27%,rgba(5,20,28,.55) 45%,rgba(5,20,28,.08) 72%,rgba(5,20,28,.01) 100%),url('assets/hero-street-1280.webp')!important;
+  }
+}

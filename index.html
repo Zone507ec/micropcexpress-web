@@ -92,7 +92,7 @@
 <!-- HERO PREMIUM 4K -->
 <section class="hero hero-premium" id="inicio">
   <div class="hero-mobile-scene" aria-hidden="true">
-    <img src="assets/hero-street-4k.webp" alt="" width="3840" height="2160" />
+    <img src="assets/hero-street-1280.webp" srcset="assets/hero-street-1280.webp 1280w, assets/hero-street-4k.webp 3840w" sizes="100vw" alt="" width="1280" height="720" fetchpriority="high" decoding="async" />
   </div>
   <div class="hero-scene" aria-hidden="true">
     <span class="hero-glow glow-1"></span>
@@ -317,6 +317,24 @@
     <button data-filter="management">GERENCIA</button>
   </div>
   <div class="solution-grid bento-grid" id="solutionGrid"></div>
+  <div class="solution-more-wrap" id="solutionMoreWrap" hidden>
+    <button class="solution-more" id="solutionMore" type="button" aria-expanded="false">VER LAS 12 SOLUCIONES</button>
+  </div>
+
+  <div class="single-solution reveal" id="solucion-individual">
+    <div class="single-solution-copy">
+      <span class="eyebrow">¿SOLO NECESITAS UNA HERRAMIENTA?</span>
+      <h3>No tienes que comprar un ecosistema completo.</h3>
+      <p>Podemos construir únicamente el módulo que resuelve tu problema actual y dejarlo listo para crecer más adelante.</p>
+    </div>
+    <div class="single-solution-grid">
+      <article data-open-solution="inventory"><b>Inventario</b><span>Stock, mínimos, movimientos y proveedores.</span><button type="button">VER DEMO</button><a href="https://wa.me/50760124997?text=Hola%20Erik%2C%20solo%20necesito%20un%20sistema%20de%20inventario%20para%20mi%20negocio." target="_blank" rel="noopener">COTIZAR SOLO INVENTARIO</a></article>
+      <article data-open-solution="crm"><b>CRM / Clientes</b><span>Seguimiento, historial y oportunidades comerciales.</span><button type="button">VER DEMO</button><a href="https://wa.me/50760124997?text=Hola%20Erik%2C%20solo%20necesito%20un%20CRM%20para%20mi%20negocio." target="_blank" rel="noopener">COTIZAR SOLO CRM</a></article>
+      <article data-open-solution="pos"><b>POS / Punto de venta</b><span>Ventas rápidas, caja, ITBMS y stock sincronizado.</span><button type="button">VER DEMO</button><a href="https://wa.me/50760124997?text=Hola%20Erik%2C%20solo%20necesito%20un%20POS%20para%20mi%20negocio." target="_blank" rel="noopener">COTIZAR SOLO POS</a></article>
+      <article data-open-solution="app"><b>Aplicación móvil</b><span>Una app para clientes o para tu operación interna.</span><button type="button">VER DEMO</button><a href="https://wa.me/50760124997?text=Hola%20Erik%2C%20quiero%20evaluar%20una%20aplicaci%C3%B3n%20m%C3%B3vil%20para%20mi%20negocio." target="_blank" rel="noopener">COTIZAR SOLO APP</a></article>
+    </div>
+  </div>
+  <noscript><div class="nojs-note">Las demos interactivas necesitan JavaScript. Aun así puedes revisar los servicios y contactar directamente a Erik por WhatsApp al +507 6012-4997.</div></noscript>
 </section>
 
 <!-- INDUSTRIAS -->
@@ -345,8 +363,14 @@
         <button id="nextScenario" aria-label="Siguiente caso">→</button>
       </div>
     </div>
-    <div id="scenarioBody"></div>
-    <div class="dots" id="scenarioDots"></div>
+    <div id="scenarioBody">
+      <h3>DE MENSAJES SUELTOS A UN PROCESO ORGANIZADO</h3>
+      <div class="scenario-panels">
+        <article><small>ANTES</small><p>Pedidos por WhatsApp, notas en papel y llamadas dispersas.</p></article>
+        <article><small>DESPUÉS</small><p>Pedido → cliente → inventario → reporte automático.</p></article>
+      </div>
+    </div>
+    <div class="dots" id="scenarioDots"><span class="active"></span><span></span><span></span><span></span></div>
   </div>
 </section>
 
@@ -591,10 +615,10 @@
   <div class="preview-browser">
     <div class="preview-browser-bar">
       <div class="preview-dots"><i></i><i></i><i></i></div>
-      <div class="preview-address"><span>🔒</span><b id="previewAddress">preview.micropcexpress.local</b></div>
+      <div class="preview-address"><span>●</span><b id="previewAddress">DEMO INTERACTIVA · MICROPCEXPRESS</b></div>
       <div class="preview-actions"><button id="previewDesktop" type="button" title="Vista escritorio">▰</button><button id="previewMobile" type="button" title="Vista móvil">▯</button><button class="lightbox-close" id="lightboxClose" aria-label="Cerrar preview">×</button></div>
     </div>
-    <div class="preview-stage" id="previewStage"><iframe id="lightboxFrame" title="Preview completo de sitio web" loading="eager"></iframe></div>
+    <div class="preview-stage" id="previewStage"><iframe id="lightboxFrame" title="Demo interactiva de sitio web MicroPCExpress" loading="lazy"></iframe></div>
     <div class="lightbox-caption"><b id="lightboxTitle">Preview Web</b><span id="lightboxCounter">01 / 06</span></div>
     <button class="lightbox-nav prev" id="lightboxPrev">←</button>
     <button class="lightbox-nav next" id="lightboxNext">→</button>
