@@ -143,6 +143,7 @@ function init() {
   setupFlow();
   setupDiagnosis();
   setupPrivacy();
+  setupTerms();
   setupContactFallback();
   setupTracking();
   setupMagnetic();
@@ -170,9 +171,18 @@ function setupShowroomLightbox() {
   if (!modal || !frame) return;
 
   $$('.showroom-item').forEach((item, index) => {
+    item.setAttribute('role', item.getAttribute('role') || 'button');
+    if (!item.hasAttribute('tabindex')) item.tabIndex = 0;
     item.onclick = () => {
       currentLightboxIndex = index;
       openPreview();
+    };
+    item.onkeydown = (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        currentLightboxIndex = index;
+        openPreview();
+      }
     };
   });
 
@@ -236,6 +246,28 @@ function setupPrivacy() {
   $('#privacyClose')?.addEventListener('click', close);
   $('#privacyAccept')?.addEventListener('click', close);
   $('#privacyBackdrop')?.addEventListener('click', close);
+}
+
+
+function setupTerms() {
+  const modal = $('#termsModal');
+  if (!modal) return;
+  const openers = [$('#termsOpen'), $('#termsOpenFromErik'), $('#termsFooter')].filter(Boolean);
+  const open = () => {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lock');
+    requestAnimationFrame(() => $('#termsClose')?.focus());
+  };
+  const close = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lock');
+  };
+  openers.forEach(button => button.addEventListener('click', open));
+  $('#termsClose')?.addEventListener('click', close);
+  $('#termsAccept')?.addEventListener('click', close);
+  $('#termsBackdrop')?.addEventListener('click', close);
 }
 
 function setupContactFallback() {
@@ -1074,6 +1106,8 @@ document.addEventListener('keydown', e => {
     $('#menuOverlay')?.setAttribute('aria-hidden', 'true');
     $('#privacyModal')?.classList.remove('open');
     $('#privacyModal')?.setAttribute('aria-hidden', 'true');
+    $('#termsModal')?.classList.remove('open');
+    $('#termsModal')?.setAttribute('aria-hidden', 'true');
     $('#lightboxModal')?.classList.remove('open');
     $('#lightboxModal')?.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('lock');
