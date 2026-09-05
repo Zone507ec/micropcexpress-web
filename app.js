@@ -140,6 +140,7 @@ function init() {
   setupReveal();
   setupScroll();
   setupMenu();
+  setupAnchorNavigation();
   setupFlow();
   setupDiagnosis();
   setupPrivacy();
@@ -311,9 +312,47 @@ function setupMenu() {
   const trigger = $('#menuBtn');
   trigger?.setAttribute('aria-expanded', 'false');
   trigger.onclick = () => { o.classList.add('open'); o.setAttribute('aria-hidden', 'false'); trigger.setAttribute('aria-expanded', 'true'); document.body.classList.add('lock'); $('#menuClose')?.focus(); };
-  $('#menuClose').onclick = close;
-  $$('.menu-list a').forEach(a => a.onclick = close);
-  function close() { o.classList.remove('open'); o.setAttribute('aria-hidden', 'true'); trigger?.setAttribute('aria-expanded', 'false'); document.body.classList.remove('lock'); trigger?.focus(); }
+  $('#menuClose').onclick = () => close(true);
+  $$('.menu-list a').forEach(a => a.addEventListener('click', () => close(false)));
+  function close(restoreFocus = true) {
+    o.classList.remove('open');
+    o.setAttribute('aria-hidden', 'true');
+    trigger?.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('lock');
+    if (restoreFocus) trigger?.focus();
+  }
+}
+
+function setupAnchorNavigation() {
+  $$('a[href^="#"]').forEach(link => {
+    const hash = link.getAttribute('href');
+    if (!hash || hash === '#') return;
+    link.addEventListener('click', event => {
+      const target = document.querySelector(hash);
+      if (!target) return;
+      event.preventDefault();
+
+      // Make sure an open mobile menu no longer locks the document before measuring.
+      const overlay = $('#menuOverlay');
+      if (overlay?.classList.contains('open')) {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        $('#menuBtn')?.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('lock');
+      }
+
+      const go = () => {
+        const headerHeight = $('#header')?.offsetHeight || 88;
+        const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 8;
+        const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+        window.scrollTo({ top: Math.max(0, top), behavior });
+        if (history.pushState) history.pushState(null, '', hash);
+      };
+
+      // Two frames allow layout to settle after unlocking/closing the overlay.
+      requestAnimationFrame(() => requestAnimationFrame(go));
+    });
+  });
 }
 
 function setupHeroDrift() {

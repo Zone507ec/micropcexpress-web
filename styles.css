@@ -1007,11 +1007,10 @@ h1,h2,h3,h4,p,a,span{overflow-wrap:break-word}
    V14 — COMMERCIAL OPTIMIZATION & PERFORMANCE
    ========================================================= */
 
-/* Defer rendering of below-the-fold sections in supporting browsers. */
-.solutions,.industries,.before-after,.implementation,.pricing,.diagnosis,.closing-premium{
-  content-visibility:auto;
-  contain-intrinsic-size:900px;
-}
+/* V15.4 — Reliable anchor navigation.
+   Do not use content-visibility on major page sections: browsers can estimate
+   their height before rendering and land on the wrong anchor on the first click. */
+section[id]{scroll-margin-top:96px}
 
 /* Direct path for clients who only want one module. */
 .single-solution{
