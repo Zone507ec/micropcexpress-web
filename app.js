@@ -180,7 +180,8 @@ function setupShowroomLightbox() {
     title.textContent = data.title;
     counter.textContent = `0${currentLightboxIndex + 1} / 0${showroomItems.length}`;
     address.textContent = `preview.micropcexpress.local/${data.preview.split('/').pop().replace('.html','')}`;
-    stage.classList.remove('mobile-mode');
+    if (window.matchMedia('(max-width: 760px)').matches) stage.classList.add('mobile-mode');
+    else stage.classList.remove('mobile-mode');
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('lock');
@@ -266,10 +267,12 @@ function setupScroll() {
 
 function setupMenu() {
   const o = $('#menuOverlay');
-  $('#menuBtn').onclick = () => { o.classList.add('open'); o.setAttribute('aria-hidden', 'false'); document.body.classList.add('lock'); $('#menuClose')?.focus(); };
+  const trigger = $('#menuBtn');
+  trigger?.setAttribute('aria-expanded', 'false');
+  trigger.onclick = () => { o.classList.add('open'); o.setAttribute('aria-hidden', 'false'); trigger.setAttribute('aria-expanded', 'true'); document.body.classList.add('lock'); $('#menuClose')?.focus(); };
   $('#menuClose').onclick = close;
   $$('.menu-list a').forEach(a => a.onclick = close);
-  function close() { o.classList.remove('open'); o.setAttribute('aria-hidden', 'true'); document.body.classList.remove('lock'); $('#menuBtn')?.focus(); }
+  function close() { o.classList.remove('open'); o.setAttribute('aria-hidden', 'true'); trigger?.setAttribute('aria-expanded', 'false'); document.body.classList.remove('lock'); trigger?.focus(); }
 }
 
 function setupHeroDrift() {

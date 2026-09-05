@@ -21,3 +21,9 @@ Contacto:
 Erik Coronado
 WhatsApp +507-6012-4997
 David, Chiriquí, Panamá
+
+V9 RESPONSIVE
+- Diseño adaptativo optimizado para desktop, tablet y celulares desde 320 px.
+- Menú móvil táctil y accesible.
+- Hero, precios, diagnóstico, soluciones, presencia digital y footer reordenados para móvil.
+- Previews completos abren automáticamente en modo celular cuando la visita proviene de un teléfono.
