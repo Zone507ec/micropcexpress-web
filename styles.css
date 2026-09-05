@@ -397,6 +397,7 @@ body{background:#f7f8f8}
 .hero-premium:before{content:"";position:absolute;inset:0;z-index:0;background-image:linear-gradient(90deg,rgba(5,20,28,.99) 0%,rgba(5,20,28,.94) 27%,rgba(5,20,28,.55) 45%,rgba(5,20,28,.08) 72%,rgba(5,20,28,.01) 100%),url('assets/hero-street-4k.webp');background-size:cover;background-position:center 46px;transform:scale(1);transform-origin:center top;animation:heroSlowZoom 18s cubic-bezier(.18,.72,.22,1) forwards;will-change:transform}
 .hero-premium:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,20,28,.10) 0%,rgba(5,20,28,0) 16%,rgba(5,20,28,0) 72%,rgba(5,20,28,.18) 100%)}
 .hero-scene{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-mobile-scene{display:none}
 .hero-premium-copy{position:relative;z-index:3;max-width:580px;align-self:center}
 .hero-premium-copy.reveal{opacity:1;transform:none;transition:none}
 .hero-premium-spacer{min-height:520px;position:relative;z-index:2}
@@ -863,4 +864,109 @@ h1,h2,h3,h4,p,a,span{overflow-wrap:break-word}
   .orbit-stage{gap:8px}
   .orbit-node{min-height:72px;padding:10px 8px}
   .footer-col-links{grid-template-columns:1fr}
+}
+
+/* NAVIGATION V10 — REDES SOCIALES */
+@media(min-width:1051px) and (max-width:1280px){
+  .desktop-nav{gap:18px}
+  .desktop-nav a{font-size:12px}
+  .header-contact-hint{display:none}
+}
+
+
+/* =========================================================
+   MOBILE HERO RECOMPOSE — V11
+   Keep the complete 4K storefront scene visible on phones instead of
+   cropping a desktop background behind oversized copy.
+   ========================================================= */
+@media(max-width:760px){
+  .hero-premium{
+    min-height:0!important;
+    padding:72px 0 0!important;
+    display:block!important;
+    background:#061820!important;
+  }
+  .hero-premium:before,
+  .hero-premium:after{display:none!important}
+  .hero-mobile-scene{
+    display:block;
+    position:relative;
+    z-index:2;
+    width:100%;
+    aspect-ratio:16/9;
+    overflow:hidden;
+    background:#061820;
+    border-bottom:1px solid rgba(230,195,111,.16);
+  }
+  .hero-mobile-scene:after{
+    content:"";
+    position:absolute;
+    inset:auto 0 0;
+    height:28%;
+    background:linear-gradient(180deg,transparent,#061820);
+    pointer-events:none;
+  }
+  .hero-mobile-scene img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+    animation:mobileHeroCinema 18s cubic-bezier(.18,.72,.22,1) forwards;
+    transform-origin:center center;
+  }
+  .hero-premium-copy{
+    position:relative;
+    z-index:3;
+    max-width:none!important;
+    padding:28px 18px 54px;
+    background:linear-gradient(180deg,#061820 0%,#071d27 100%);
+  }
+  .hero-premium .hero-eyebrow{
+    max-width:none!important;
+    font-size:9px!important;
+    line-height:1.45;
+    letter-spacing:.12em;
+  }
+  .hero-premium h1{
+    max-width:none!important;
+    font-size:clamp(39px,11.2vw,47px)!important;
+    line-height:.96!important;
+    margin:13px 0 16px!important;
+    letter-spacing:-.038em!important;
+  }
+  .hero-premium .hero-premium-copy>p{
+    font-size:13.5px!important;
+    line-height:1.68!important;
+    max-width:38em!important;
+  }
+  .hero-actions{margin-top:21px!important}
+  .hero-actions .btn{min-height:48px!important}
+  .hero-contact-row{
+    margin-top:17px!important;
+    padding-top:15px;
+    border-top:1px solid rgba(255,255,255,.09);
+  }
+  .hero-premium-spacer,.hero-glow{display:none!important}
+  .wa{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateY(12px);
+  }
+  .wa.mobile-visible{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:none;
+  }
+}
+@media(max-width:420px){
+  .hero-premium-copy{padding-left:16px;padding-right:16px;padding-bottom:50px}
+  .hero-premium h1{font-size:clamp(38px,11.4vw,45px)!important}
+  .hero-mobile-scene{aspect-ratio:16/9}
+}
+@keyframes mobileHeroCinema{from{transform:scale(1)}to{transform:scale(1.018)}}
+@media(prefers-reduced-motion:reduce){
+  .hero-mobile-scene img{animation:none!important;transform:none!important}
 }

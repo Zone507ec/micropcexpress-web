@@ -262,6 +262,8 @@ function setupScroll() {
     $('#progress').style.transform = `scaleX(${m ? scrollY / m : 0})`;
     $('#header').classList.toggle('scrolled', scrollY > 40);
     $('#backToTop')?.classList.toggle('visible', scrollY > 600);
+    const wa = $('.wa');
+    if (wa) wa.classList.toggle('mobile-visible', scrollY > Math.min(520, innerHeight * .68));
   }, { passive: true });
 }
 
