@@ -677,6 +677,8 @@ body{background:#f7f8f8}
   .hero-premium:before,.hero-sequence .hero-eyebrow,.hero-sequence h1,.hero-sequence p,.hero-sequence .hero-actions,.hero-sequence .hero-contact-row,.hero-glow{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}
 }
 
+.menu-mobile-cta{display:none}
+
 /* =========================================================
    MOBILE-FIRST HARDENING — V9
    Designed for 320px–760px phones without horizontal overflow.
@@ -700,13 +702,28 @@ h1,h2,h3,h4,p,a,span{overflow-wrap:break-word}
   .header-right{display:none}
   .menu-btn{display:grid;place-items:center;width:46px;height:46px;margin-left:auto;border-radius:12px;border:1px solid rgba(255,255,255,.12);flex:0 0 auto}
   .menu-btn span{width:21px}
-  .menu-overlay{padding:18px 18px 22px}
-  .menu-head{gap:12px}
-  .menu-head button{margin-left:auto}
-  .menu-list{margin-top:4vh}
-  .menu-list a{grid-template-columns:42px 1fr;padding:12px 0}
-  .menu-list span{font-size:clamp(30px,10vw,46px)}
-  .menu-foot{display:grid;gap:8px;font-size:9px;line-height:1.5}
+  .menu-overlay{
+    padding:18px 18px 16px;
+    background:rgba(7,26,35,.985);
+    backdrop-filter:blur(24px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+  .menu-head{gap:12px;flex:0 0 auto;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.10)}
+  .menu-head .brand strong{color:#fff}
+  .menu-head .brand small{color:var(--brass2)}
+  .menu-head .brand-icon{background:transparent;border:1px solid rgba(230,195,111,.60);color:var(--brass2);box-shadow:none}
+  .menu-head button{margin-left:auto;padding:10px 14px;border-radius:12px;border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:#fff;font-size:9px;letter-spacing:.08em}
+  .menu-list{margin:18px 0 12px;flex:0 0 auto}
+  .menu-list li{border-top-color:rgba(255,255,255,.10)}
+  .menu-list li:last-child{border-bottom-color:rgba(255,255,255,.10)}
+  .menu-list a{grid-template-columns:34px 1fr;min-height:52px;padding:10px 0}
+  .menu-list a:hover{padding-left:4px;color:var(--brass2)}
+  .menu-list em{color:var(--brass2);font-size:9px;letter-spacing:.10em}
+  .menu-list span{font-size:clamp(23px,7.2vw,30px);line-height:1.03;letter-spacing:-.035em;color:#f7fafb}
+  .menu-mobile-cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin:4px 0 14px;padding:12px 16px;border-radius:14px;background:var(--brass2);color:#241805;font-size:10px;font-weight:900;letter-spacing:.055em;text-align:center;flex:0 0 auto}
+  .menu-foot{margin-top:0;padding-top:13px;border-top-color:rgba(255,255,255,.10);display:grid;gap:6px;font-size:8.5px;line-height:1.45;color:#9eb0b7;flex:0 0 auto}
 
   /* HERO — readable and thumb friendly */
   .hero-premium{min-height:760px;padding:112px 18px 58px;display:block}
@@ -969,4 +986,13 @@ h1,h2,h3,h4,p,a,span{overflow-wrap:break-word}
 @keyframes mobileHeroCinema{from{transform:scale(1)}to{transform:scale(1.018)}}
 @media(prefers-reduced-motion:reduce){
   .hero-mobile-scene img{animation:none!important;transform:none!important}
+}
+
+
+@media(max-width:390px){
+  .menu-overlay{padding-left:14px;padding-right:14px}
+  .menu-list{margin-top:14px}
+  .menu-list a{min-height:48px;padding:8px 0}
+  .menu-list span{font-size:clamp(21px,7vw,27px)}
+  .menu-mobile-cta{min-height:46px;margin-bottom:10px}
 }
