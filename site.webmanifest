@@ -1,0 +1,9 @@
+{
+  "name": "MicroPCExpress Web & Digital Systems",
+  "short_name": "MicroPCExpress",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F9FA",
+  "theme_color": "#0C2946",
+  "icons": []
+}
