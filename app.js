@@ -923,10 +923,94 @@ function bindDemo(slug) {
   }
 }
 
+
+/* =========================================================
+   07A — SOCIAL ORBIT INTERACTION
+   ========================================================= */
+function initOrbitInteraction(){
+  const stage = document.querySelector('[data-orbit-stage]');
+  if (!stage) return;
+
+  const nodes = Array.from(stage.querySelectorAll('.orbit-node'));
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+  const resetOrbit = () => {
+    stage.style.setProperty('--ringShiftX', '0px');
+    stage.style.setProperty('--ringShiftY', '0px');
+    stage.style.setProperty('--ringSpinA', '0deg');
+    stage.style.setProperty('--ringSpinB', '0deg');
+    stage.style.setProperty('--coreX', '0px');
+    stage.style.setProperty('--coreY', '0px');
+    stage.style.setProperty('--coreScale', '1');
+    nodes.forEach(node => {
+      node.style.setProperty('--tx', '0px');
+      node.style.setProperty('--ty', '0px');
+      node.style.setProperty('--scale', '1');
+      node.classList.remove('is-hot');
+    });
+  };
+
+  const updateOrbit = (event) => {
+    if (!finePointer.matches || window.innerWidth <= 860) return;
+
+    const rect = stage.getBoundingClientRect();
+    const px = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+    const py = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+    const spin = px * 16;
+
+    stage.style.setProperty('--ringShiftX', `${(px * 12).toFixed(2)}px`);
+    stage.style.setProperty('--ringShiftY', `${(py * 8).toFixed(2)}px`);
+    stage.style.setProperty('--ringSpinA', `${spin.toFixed(2)}deg`);
+    stage.style.setProperty('--ringSpinB', `${(-spin * 0.55).toFixed(2)}deg`);
+    stage.style.setProperty('--coreX', `${(-px * 10).toFixed(2)}px`);
+    stage.style.setProperty('--coreY', `${(-py * 8).toFixed(2)}px`);
+    stage.style.setProperty('--coreScale', `${(1 + Math.abs(px) * 0.018 + Math.abs(py) * 0.012).toFixed(3)}`);
+
+    nodes.forEach((node, index) => {
+      const angleDeg = parseFloat(node.dataset.angle || '0');
+      const radius = parseFloat(node.dataset.radius || '180');
+      const theta = angleDeg * Math.PI / 180;
+      const delta = px * 0.23;
+      const orbitalX = radius * (Math.cos(theta + delta) - Math.cos(theta));
+      const orbitalY = radius * (Math.sin(theta + delta) - Math.sin(theta));
+      const depthX = px * (4 + index * 0.75);
+      const depthY = py * (6 + index * 0.65);
+      const finalX = orbitalX + depthX;
+      const finalY = orbitalY + depthY;
+      const scale = 1 + Math.max(0, 0.028 - Math.abs(delta - index * 0.007));
+
+      node.style.setProperty('--tx', `${finalX.toFixed(2)}px`);
+      node.style.setProperty('--ty', `${finalY.toFixed(2)}px`);
+      node.style.setProperty('--scale', scale.toFixed(3));
+    });
+  };
+
+  if (finePointer.matches && window.innerWidth > 860) {
+    stage.addEventListener('mousemove', updateOrbit);
+    stage.addEventListener('mouseenter', updateOrbit);
+    stage.addEventListener('mouseleave', resetOrbit);
+    nodes.forEach(node => {
+      node.addEventListener('mouseenter', () => node.classList.add('is-hot'));
+      node.addEventListener('mouseleave', () => node.classList.remove('is-hot'));
+    });
+  }
+
+  const mediaReset = () => {
+    if (!finePointer.matches || window.innerWidth <= 860) resetOrbit();
+  };
+  window.addEventListener('resize', mediaReset);
+  if (finePointer.addEventListener) finePointer.addEventListener('change', mediaReset);
+  else if (finePointer.addListener) finePointer.addListener(mediaReset);
+  resetOrbit();
+}
+
 /* =========================================================
    07 — DOM READY INITIALIZER & KEYBOARD ACCESSIBILITY
    ========================================================= */
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  initOrbitInteraction();
+});
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     closeExperience();
