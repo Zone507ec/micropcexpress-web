@@ -1,0 +1,44 @@
+MICROPCEXPRESS — MOTION MAX V3 — PROYECTO COMPLETO
+=====================================================
+
+Versión experimental con motion design avanzado integrada sobre la versión ULTIMATE v15.4.
+
+ARCHIVOS PRINCIPALES
+- index.html ................ versión MOTION MAX V3 lista para publicar
+- index_BASE_v15_4_backup.html ... respaldo de la página base antes del Motion Max
+- styles.css ................ estilos originales de MicroPCExpress
+- app.js .................... lógica e interacciones originales
+- analytics.js .............. analítica base del proyecto
+- config.js ................. configuración
+- site.webmanifest .......... manifest PWA
+- robots.txt ................ SEO/crawlers
+- assets/ ................... todas las imágenes y recursos locales
+- previews/ ................. demos HTML de negocios
+
+NUEVO EN MOTION MAX V3
+- Intro cinematográfica
+- Hero con auroras, partículas Canvas, grid y líneas de energía
+- Browser 3D flotante + HUD + scanner
+- Parallax y microinteracciones
+- Métricas animadas
+- Scrollytelling de 3 etapas
+- Spotlight/tilt/magnetic buttons y motion reveal
+- Respeto de prefers-reduced-motion
+
+CÓMO PROBAR
+1. Abra index.html directamente para una prueba rápida.
+2. Para una prueba 100% fiel, levante un servidor local (por ejemplo VS Code Live Server).
+3. Para publicar, suba TODO el contenido de esta carpeta a GitHub/Vercel/Cloudflare.
+
+IMPORTANTE
+- Las imágenes y recursos de MicroPCExpress están incluidos localmente.
+- Solo Google Fonts sigue cargándose desde Internet. Si se desea, puede reemplazarse por fuentes locales más adelante.
+- No se ha sobrescrito el respaldo index_BASE_v15_4_backup.html.
+
+Preparado: 2026-09-07
+
+ACTUALIZACIÓN V3.1 — CORRECCIÓN DE ESPACIO VACÍO
+- Corregido el bloque de scrollytelling que podía dejar un tramo grande vacío en escritorio.
+- El contenedor ya no usa overflow que interfiera con position: sticky.
+- Altura del recorrido reducida de 310vh a 255vh para una navegación más compacta.
+- Transición final suavizada hacia la siguiente sección.
