@@ -818,10 +818,21 @@ body:not(.motion-ultra) .u-story,body:not(.motion-ultra) .u-hero-word,body:not(.
   </div>
 </section>
 
+<div style="text-align:center;padding:24px;background:#05161e"><a class="btn primary" href="#experiencia-final">VER LA EXPERIENCIA ↓</a></div>
+<!-- Scroll-pinned image reveal -->
+<section class="image-journey" id="experiencia-final" aria-label="Tu idea puede llegar más lejos">
+  <div class="journey-stage">
+  <div class="journey-frame" aria-hidden="true">
+    <picture><source media="(max-width:760px)" srcset="assets/cta-david-1280.webp"><img src="assets/cta-david-4k.webp" alt="" width="3840" height="2160" loading="lazy"></picture>
+  </div>
+  <div class="journey-caption"><span>DE UNA IDEA A TU PRÓXIMO PASO</span><h2>Tu negocio.<br>Sin límites.</h2></div>
+  <a class="journey-hint" href="#contacto">SIGUE BAJANDO <span aria-hidden="true">↓</span></a>
+  <div class="journey-progress" aria-hidden="true"></div>
+  </div>
+</section>
 <!-- CTA FINAL 4K -->
 <section class="closing closing-premium section" id="contacto">
-  <button class="closing-motion-toggle" type="button" aria-pressed="false">Pausar animación ❚❚</button>
-  <div class="closing-premium-copy reveal">
+  <div class="closing-premium-copy">
     <span class="eyebrow">HAGAMOS CRECER TU NEGOCIO JUNTOS</span>
     <h2>CUÉNTAME SOBRE TU NEGOCIO.</h2>
     <p>No necesitas saber de páginas web ni de sistemas. Cuéntame cómo funciona hoy tu negocio, qué te quita tiempo y qué te gustaría mejorar.</p>
@@ -914,6 +925,8 @@ body:not(.motion-ultra) .u-story,body:not(.motion-ultra) .u-hero-word,body:not(.
 
 <script src="config.js"></script>
 <script src="analytics.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
 <script src="app.js"></script>
 
 <script id="motion-ultra-js">

@@ -1153,17 +1153,54 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// Pause the contact background outside the viewport or on request.
+// GSAP owns this scene only; all contact content remains usable without it.
 (() => {
   const closing = document.querySelector('.closing-premium');
-  const toggle = closing?.querySelector('.closing-motion-toggle');
-  if (!closing || !toggle) return;
-  new IntersectionObserver(entries => {
-    closing.classList.toggle('is-in-view', entries[0].isIntersecting);
-  }).observe(closing);
-  toggle.addEventListener('click', () => {
-    const paused = closing.classList.toggle('motion-paused');
-    toggle.setAttribute('aria-pressed', String(paused));
-    toggle.textContent = paused ? 'Reanudar animación ▶' : 'Pausar animación ❚❚';
+  if (!closing || !window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+  const media = gsap.matchMedia();
+  media.add({ desktop: '(min-width:761px)', mobile: '(max-width:760px)', reduce: '(prefers-reduced-motion:reduce)' }, context => {
+    if (context.conditions.reduce) return;
+    const mobile = context.conditions.mobile;
+    const scene = document.querySelector('.image-journey');
+    if (!scene) return;
+    scene.classList.add('has-scroll-motion');
+    const timeline = gsap.timeline({
+      defaults: { ease: 'none' },
+      scrollTrigger: {
+        trigger: scene, start: mobile ? 'top 70px' : 'top 80px',
+        end: 'bottom bottom', scrub: .45, invalidateOnRefresh: true
+      }
+    });
+    timeline.fromTo(scene.querySelector('.journey-frame'), {
+      clipPath: mobile ? 'inset(24% 12% round 28px)' : 'inset(22% 26% round 40px)'
+    }, { clipPath: 'inset(0% 0% round 0px)', duration: 1 }, 0);
+    timeline.fromTo(scene.querySelector('.journey-frame img'), {
+      scale: 1.35, yPercent: -6
+    }, { scale: 1, yPercent: 0, duration: 1.2 }, 0);
+    timeline.fromTo(scene.querySelector('.journey-caption'), {
+      opacity: 0, y: 50
+    }, { opacity: 1, y: 0, duration: .4 }, .6);
+    timeline.to(scene.querySelector('.journey-progress'), { scaleX: 1, duration: 1.2 }, 0);
+    return () => scene.classList.remove('has-scroll-motion');
+
   });
+  // Refresh after fonts/images settle and after dynamic sections change height.
+  window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+  document.fonts?.ready.then(() => ScrollTrigger.refresh());
+  // Observe only content above the pin to avoid refresh feedback from pin spacing.
+  let refreshTimer;
+  const sizes = new WeakMap();
+  const resizeObserver = new ResizeObserver(entries => {
+    let changed = false;
+    entries.forEach(entry => {
+      const height = entry.contentRect.height;
+      if (sizes.has(entry.target) && Math.abs(sizes.get(entry.target) - height) > 1) changed = true;
+      sizes.set(entry.target, height);
+    });
+    if (!changed) return;
+    clearTimeout(refreshTimer);
+    refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 150);
+  });
+  document.querySelectorAll('#diagnostico, #soluciones, #proceso').forEach(el => resizeObserver.observe(el));
 })();

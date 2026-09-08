@@ -1346,11 +1346,44 @@ section[id]{scroll-margin-top:96px}
   .terms-footer-actions .btn{width:100%}
 }
 
-/* Contact photo motion keeps text and controls stable. */
-.closing-premium{position:relative;isolation:isolate;overflow:hidden}
-body .closing-premium.section::before,body.motion-ultra .closing-premium.section::before{content:"";position:absolute;inset:0;width:auto;height:auto;border-radius:0;filter:none;z-index:-1;background-image:inherit;background-size:cover;background-position:inherit;transform-origin:70% 65%;animation:closing-photo-drift 9s ease-in-out infinite alternate;animation-play-state:paused;pointer-events:none}
-body .closing-premium.section.is-in-view:not(.motion-paused)::before{animation-play-state:running}
-@keyframes closing-photo-drift{from{transform:scale(1.02) translateX(-0.3%)}to{transform:scale(1.14) translateX(0.8%)}}
-.closing-motion-toggle{position:absolute;right:20px;bottom:18px;z-index:2;border:1px solid rgba(255,255,255,.4);border-radius:30px;padding:10px 14px;background:rgba(5,22,30,.85);color:#fff;font:inherit;font-size:12px;cursor:pointer}
-.closing-motion-toggle:focus-visible{outline:3px solid #e9c883;outline-offset:4px}
-@media(prefers-reduced-motion:reduce){.closing-premium::before{animation:none!important;transform:none!important}.closing-motion-toggle{display:none}}
+/* Scroll-driven contact scene. Static and readable without JavaScript. */
+body .closing-premium.section{position:relative;isolation:isolate;overflow:hidden;background:#05161e!important;min-height:780px}
+body .closing-premium.section::before,body.motion-ultra .closing-premium.section::before{content:none}
+.closing-scene{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.closing-photo{position:absolute;inset:-8% 0;display:block}
+.closing-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:65% center}
+.closing-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,22,30,.98),rgba(5,22,30,.87) 32%,rgba(5,22,30,.25) 65%,rgba(5,22,30,.05))}
+.closing-premium-copy{position:relative;z-index:1}
+@media(max-width:760px){
+ body .closing-premium.section{min-height:760px}
+ .closing-shade{background:linear-gradient(180deg,rgba(5,22,30,.96),rgba(5,22,30,.88) 52%,rgba(5,22,30,.18))}
+ .closing-photo img{object-position:67% center}
+}
+
+/* Dedicated, pinned reveal: the complete transformation stays in view. */
+.image-journey{position:relative;height:calc(100svh - 80px);min-height:420px;overflow:hidden;background:#05161e;isolation:isolate;scroll-margin-top:80px}
+.journey-frame{position:absolute;inset:0;overflow:hidden}
+.journey-frame picture{display:block;width:100%;height:100%}
+.journey-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:65% center}
+.journey-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,22,30,.18),transparent 40%,rgba(5,22,30,.8))}
+.journey-caption{position:absolute;left:7%;bottom:18%;color:#fff;text-shadow:0 2px 24px #05161e}
+.journey-caption>span{font-size:11px;font-weight:800;letter-spacing:.18em;color:#e6c36f}
+.journey-caption h2{font-family:Georgia,serif;font-size:clamp(40px,7vw,104px);line-height:1;margin:16px 0 0}
+.journey-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:#fff;text-decoration:none;font-size:11px;font-weight:800;letter-spacing:.15em;background:#05161ed9;padding:12px 20px;border:1px solid #ffffff40;border-radius:30px;white-space:nowrap}
+.journey-hint span{margin-left:12px;font-size:18px}
+.journey-progress{position:absolute;bottom:0;left:0;width:100%;height:4px;background:#e6c36f;transform:scaleX(0);transform-origin:left}
+@media(max-width:760px){.image-journey{height:calc(100svh - 70px);scroll-margin-top:70px}.journey-caption{left:7%;bottom:22%}.journey-caption>span{font-size:9px}}
+
+/* Native sticky positioning keeps the scroll geometry stable on resize. */
+.image-journey{height:auto;min-height:0;overflow:visible}
+.journey-stage{position:relative;height:calc(100svh - 80px);min-height:420px;overflow:hidden}
+@media(prefers-reduced-motion:no-preference){
+ .image-journey.has-scroll-motion{height:240svh}
+ .has-scroll-motion .journey-stage{position:sticky;top:80px}
+}
+@media(max-width:760px){.journey-stage{height:calc(100svh - 70px)}.has-scroll-motion .journey-stage{top:70px}}
+
+/* The photo belongs to the scroll scene; contact follows on a clean background. */
+body .closing-premium.section{min-height:0;padding-top:80px;padding-bottom:80px;background:linear-gradient(135deg,#05161e,#0b2831)!important}
+.closing-premium-copy{width:100%;max-width:760px;margin:0 auto}
+@media(max-width:760px){body .closing-premium.section{padding-top:48px;padding-bottom:60px}}
