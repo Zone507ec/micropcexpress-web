@@ -1345,3 +1345,12 @@ section[id]{scroll-margin-top:96px}
   .terms-footer-actions{justify-content:stretch}
   .terms-footer-actions .btn{width:100%}
 }
+
+/* Contact photo motion keeps text and controls stable. */
+.closing-premium{position:relative;isolation:isolate;overflow:hidden}
+body .closing-premium.section::before,body.motion-ultra .closing-premium.section::before{content:"";position:absolute;inset:0;width:auto;height:auto;border-radius:0;filter:none;z-index:-1;background-image:inherit;background-size:cover;background-position:inherit;transform-origin:70% 65%;animation:closing-photo-drift 9s ease-in-out infinite alternate;animation-play-state:paused;pointer-events:none}
+body .closing-premium.section.is-in-view:not(.motion-paused)::before{animation-play-state:running}
+@keyframes closing-photo-drift{from{transform:scale(1.02) translateX(-0.3%)}to{transform:scale(1.14) translateX(0.8%)}}
+.closing-motion-toggle{position:absolute;right:20px;bottom:18px;z-index:2;border:1px solid rgba(255,255,255,.4);border-radius:30px;padding:10px 14px;background:rgba(5,22,30,.85);color:#fff;font:inherit;font-size:12px;cursor:pointer}
+.closing-motion-toggle:focus-visible{outline:3px solid #e9c883;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.closing-premium::before{animation:none!important;transform:none!important}.closing-motion-toggle{display:none}}

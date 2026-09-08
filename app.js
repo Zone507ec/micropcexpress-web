@@ -1152,3 +1152,18 @@ document.addEventListener('keydown', e => {
     document.body.classList.remove('lock');
   }
 });
+
+// Pause the contact background outside the viewport or on request.
+(() => {
+  const closing = document.querySelector('.closing-premium');
+  const toggle = closing?.querySelector('.closing-motion-toggle');
+  if (!closing || !toggle) return;
+  new IntersectionObserver(entries => {
+    closing.classList.toggle('is-in-view', entries[0].isIntersecting);
+  }).observe(closing);
+  toggle.addEventListener('click', () => {
+    const paused = closing.classList.toggle('motion-paused');
+    toggle.setAttribute('aria-pressed', String(paused));
+    toggle.textContent = paused ? 'Reanudar animación ▶' : 'Pausar animación ❚❚';
+  });
+})();
