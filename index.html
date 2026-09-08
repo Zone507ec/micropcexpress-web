@@ -1,987 +1,361 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="theme-color" content="#071a23" />
-<title>MicroPCExpress | Soluciones Digitales para Negocios en Chiriquí, Panamá</title>
-<meta name="description" content="MicroPCExpress desarrolla páginas web, aplicaciones móviles, inventario, CRM, pedidos, reservas y sistemas a la medida para negocios en David, Chiriquí, Panamá." />
-<meta property="og:title" content="MicroPCExpress | Soluciones Digitales para Negocios" />
-<meta property="og:description" content="Páginas web profesionales, e-commerce, aplicaciones y sistemas digitales diseñados para hacer crecer y organizar empresas." />
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="es_PA" />
-<meta property="og:image" content="assets/og-cover.webp" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="MicroPCExpress — Soluciones Digitales para Negocios" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="MicroPCExpress | Soluciones Digitales" />
-<meta name="twitter:description" content="Páginas web, aplicaciones, e-commerce y sistemas para negocios en David, Chiriquí, Panamá." />
-<meta name="twitter:image" content="assets/og-cover.webp" />
-<link rel="canonical" href="/" />
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-<link rel="manifest" href="site.webmanifest" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
-<script type="application/ld+json">{
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"MicroPCExpress",
-  "description":"Soluciones digitales para pequeños y medianos negocios: páginas web, aplicaciones, inventario, CRM y sistemas a medida.",
-  "telephone":"+50760124997",
-  "image":"assets/og-cover.webp",
-  "url":"/",
-  "address":{"@type":"PostalAddress","addressLocality":"David","addressRegion":"Chiriquí","addressCountry":"PA"},
-  "areaServed":[{"@type":"City","name":"David"},{"@type":"AdministrativeArea","name":"Chiriquí"},{"@type":"Country","name":"Panamá"}],
-  "serviceType":["Páginas web profesionales","eCommerce","Aplicaciones móviles","Sistemas de inventario","CRM","POS","Automatización"]
-}</script>
-
-<style id="motion-ultra-style">
-:root{--u-navy:#06141e;--u-blue:#0c2946;--u-teal:#0ca89b;--u-cyan:#72dace;--u-cyan2:#4bc6d8;--u-gold:#e6c36f;--u-white:#f8fbfc;--u-mx:50%;--u-my:50%}
-html{scroll-behavior:smooth}
-body.motion-ultra{overflow-x:hidden;background:#f7f9fa}
-body.motion-ultra .header{background:rgba(4,18,27,.78)!important;border-bottom:1px solid rgba(114,218,206,.15)!important;backdrop-filter:blur(18px) saturate(135%);-webkit-backdrop-filter:blur(18px) saturate(135%)}
-body.motion-ultra .header .brand strong,body.motion-ultra .header .desktop-nav a,body.motion-ultra .header .header-contact-hint{color:#eef9fa!important}
-body.motion-ultra .header .brand small{color:rgba(238,249,250,.58)!important}
-body.motion-ultra .header .brand-icon{background:linear-gradient(135deg,var(--u-cyan),var(--u-teal))!important;color:#05212a!important;box-shadow:0 0 34px rgba(114,218,206,.25)}
-body.motion-ultra .menu-btn span{background:#fff!important}
-
-/* HERO CINEMATIC */
-body.motion-ultra .hero-premium{position:relative;min-height:100svh;display:grid!important;grid-template-columns:minmax(0,1.02fr) minmax(420px,.98fr)!important;align-items:center!important;gap:clamp(30px,4vw,76px)!important;padding:clamp(132px,12vw,170px) clamp(28px,7vw,110px) 86px!important;background:
-radial-gradient(900px 520px at 15% 18%,rgba(12,168,155,.17),transparent 68%),
-radial-gradient(820px 520px at 86% 26%,rgba(75,198,216,.13),transparent 68%),
-linear-gradient(135deg,#030b11 0%,#071925 46%,#0b2940 100%)!important;isolation:isolate;overflow:hidden;color:#fff}
-body.motion-ultra .hero-premium::before{content:"";position:absolute;inset:-1px;z-index:-5;background-image:linear-gradient(rgba(114,218,206,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(114,218,206,.055) 1px,transparent 1px);background-size:62px 62px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.72),transparent 88%);animation:uGrid 18s linear infinite}
-@keyframes uGrid{to{background-position:62px 62px}}
-body.motion-ultra .hero-premium::after{content:"";position:absolute;inset:0;z-index:-4;pointer-events:none;background:radial-gradient(520px circle at var(--u-mx) var(--u-my),rgba(114,218,206,.12),transparent 64%)}
-.u-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-3;opacity:.72;pointer-events:none}
-.u-aurora{position:absolute;width:42vw;height:42vw;min-width:540px;min-height:540px;border-radius:50%;filter:blur(64px);opacity:.25;z-index:-2;pointer-events:none;mix-blend-mode:screen}
-.u-aurora.a{left:-18vw;top:-14vw;background:conic-gradient(from 40deg,var(--u-teal),transparent,var(--u-cyan),transparent,var(--u-teal));animation:uAuroraA 16s ease-in-out infinite alternate}
-.u-aurora.b{right:-18vw;bottom:-23vw;background:conic-gradient(from 180deg,var(--u-cyan2),transparent,var(--u-gold),transparent,var(--u-cyan));animation:uAuroraB 19s ease-in-out infinite alternate}
-@keyframes uAuroraA{to{transform:translate(8vw,7vw) scale(1.18) rotate(28deg)}}
-@keyframes uAuroraB{to{transform:translate(-8vw,-4vw) scale(.92) rotate(-35deg)}}
-.u-noise{position:absolute;inset:0;z-index:-1;opacity:.09;pointer-events:none;background-image:url('assets/motion-noise.png');background-size:340px;mix-blend-mode:soft-light}
-body.motion-ultra .hero-mobile-scene,body.motion-ultra .hero-scene,body.motion-ultra .hero-premium-spacer{display:none!important}
-body.motion-ultra .hero-premium-copy{position:relative!important;z-index:4!important;max-width:760px!important;margin:0!important;padding:0!important;color:#fff!important}
-body.motion-ultra .hero-premium-copy .eyebrow{display:inline-flex!important;align-items:center;gap:10px;padding:9px 14px!important;border:1px solid rgba(114,218,206,.22);border-radius:999px;background:rgba(114,218,206,.06);color:#baf6ef!important;box-shadow:inset 0 0 24px rgba(114,218,206,.035);letter-spacing:.13em!important;animation:uPill 4.5s ease-in-out infinite}
-body.motion-ultra .hero-premium-copy .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--u-cyan);box-shadow:0 0 0 5px rgba(114,218,206,.09),0 0 18px rgba(114,218,206,.7);animation:uDot 1.8s ease-in-out infinite}
-@keyframes uDot{50%{box-shadow:0 0 0 9px rgba(114,218,206,0),0 0 24px rgba(114,218,206,.95)}}
-@keyframes uPill{50%{transform:translateY(-2px)}}
-body.motion-ultra .hero-premium h1{font-size:clamp(52px,6.2vw,102px)!important;line-height:.92!important;letter-spacing:-.055em!important;color:#f7fbfd!important;max-width:900px!important;margin:24px 0 24px!important;text-wrap:balance;text-shadow:0 16px 55px rgba(0,0,0,.28)}
-body.motion-ultra .hero-premium h1 span{position:relative;display:inline-block;background:radial-gradient(90% 170% at var(--gx,22%) var(--gy,36%),#e9ffff 0%,#72dace 28%,#4bc6d8 52%,#e6c36f 88%);background-size:190% 190%;-webkit-background-clip:text;background-clip:text;color:transparent!important;animation:uGradient 6s ease-in-out infinite;filter:drop-shadow(0 0 24px rgba(114,218,206,.16))}
-body.motion-ultra .hero-premium h1 span::after{content:"";position:absolute;left:3%;right:3%;bottom:-8px;height:2px;background:linear-gradient(90deg,transparent,#72dace,#e6c36f,transparent);box-shadow:0 0 18px rgba(114,218,206,.55);transform:scaleX(.55);animation:uUnderline 3.2s ease-in-out infinite}
-@keyframes uGradient{0%,100%{--gx:22%;--gy:36%;background-position:0% 45%}40%{--gx:74%;--gy:28%;background-position:85% 35%}72%{--gx:46%;--gy:78%;background-position:52% 88%}}
-@keyframes uUnderline{50%{transform:scaleX(1)}}
-body.motion-ultra .hero-premium-copy>p{max-width:690px!important;color:rgba(236,247,250,.74)!important;font-size:clamp(17px,1.35vw,21px)!important;line-height:1.7!important}
-body.motion-ultra .hero-actions{gap:12px!important;margin-top:30px!important;display:flex!important;flex-wrap:wrap}
-body.motion-ultra .hero-actions .btn{min-height:58px!important;border-radius:999px!important;padding:0 24px!important;position:relative;overflow:hidden;isolation:isolate;border:1px solid rgba(255,255,255,.16)!important;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease!important}
-body.motion-ultra .hero-actions .btn.primary{background:linear-gradient(135deg,#72dace 0%,#0ca89b 58%,#087c74 100%)!important;color:#04171f!important;box-shadow:0 14px 40px rgba(12,168,155,.26)}
-body.motion-ultra .hero-actions .hero-ghost{background:rgba(255,255,255,.035)!important;color:#f7fbfc!important;backdrop-filter:blur(10px)}
-body.motion-ultra .hero-actions .btn::after{content:"";position:absolute;inset:-140% -40%;z-index:-1;background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.48) 50%,transparent 58%);transform:translateX(-68%) rotate(8deg);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-body.motion-ultra .hero-actions .btn:hover::after{transform:translateX(72%) rotate(8deg)}
-body.motion-ultra .hero-actions .btn:hover{box-shadow:0 18px 50px rgba(12,168,155,.35);border-color:rgba(114,218,206,.4)!important}
-body.motion-ultra .hero-contact-row{margin-top:34px!important;padding-top:20px!important;border-top:1px solid rgba(255,255,255,.1)!important;color:rgba(230,245,248,.52)!important;display:flex!important;flex-wrap:wrap!important;gap:18px!important;font-size:12px!important;letter-spacing:.06em}
-
-/* right hand live visual */
-.u-visual{position:relative;z-index:4;min-height:610px;display:flex;align-items:center;justify-content:center;perspective:1500px;transform-style:preserve-3d}
-.u-browser-wrap{position:relative;width:min(92%,680px);transform:rotateY(var(--u-ry,0deg)) rotateX(var(--u-rx,0deg)) translate3d(var(--u-tx,0px),calc(var(--u-ty,0px) + var(--u-scroll-y,0px)),0);transform-style:preserve-3d;transition:transform .18s ease-out;animation:uFloat 6s ease-in-out infinite}
-@keyframes uFloat{50%{margin-top:-16px}}
-.u-browser-glow{position:absolute;inset:6% 4% -4% 8%;border-radius:36px;background:linear-gradient(135deg,rgba(114,218,206,.45),rgba(75,198,216,.14),rgba(230,195,111,.2));filter:blur(50px);opacity:.48;z-index:-1;animation:uPulse 5s ease-in-out infinite}
-@keyframes uPulse{50%{opacity:.72;transform:scale(1.04)}}
-.u-browser{position:relative;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.15);background:rgba(7,25,37,.62);box-shadow:0 40px 100px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(20px);transform:translateZ(35px)}
-.u-browser::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 34%,rgba(255,255,255,.08) 47%,transparent 59%);transform:translateX(-120%);animation:uSheen 6.7s ease-in-out infinite}
-@keyframes uSheen{0%,55%{transform:translateX(-120%)}75%,100%{transform:translateX(120%)}}
-.u-browser-bar{height:48px;display:flex;align-items:center;gap:9px;padding:0 16px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035)}
-.u-browser-bar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28)}
-.u-browser-address{margin-left:8px;flex:1;height:25px;border-radius:999px;background:rgba(255,255,255,.055);display:flex;align-items:center;padding:0 12px;color:rgba(255,255,255,.38);font:700 9px/1 'Plus Jakarta Sans';letter-spacing:.08em;overflow:hidden}
-.u-screen{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0a2434}
-.u-screen img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92) contrast(1.06) brightness(.77);transform:scale(1.04);animation:uScreen 12s ease-in-out infinite alternate}
-@keyframes uScreen{to{transform:scale(1.11) translate3d(-1.5%,1%,0)}}
-.u-screen::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(4,16,24,.42)),radial-gradient(circle at 70% 20%,rgba(114,218,206,.16),transparent 36%)}
-.u-screen-ui{position:absolute;inset:0;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;z-index:2}
-.u-screen-ui strong{font:800 clamp(20px,2.1vw,34px)/1.05 'Plus Jakarta Sans';letter-spacing:-.045em;color:#fff;max-width:390px;text-shadow:0 10px 28px rgba(0,0,0,.35)}
-.u-screen-ui span{margin-top:10px;color:#b8f4ed;font:700 10px/1 'Plus Jakarta Sans';letter-spacing:.14em;text-transform:uppercase}
-.u-chip{position:absolute;z-index:9;padding:12px 15px;border:1px solid rgba(255,255,255,.15);border-radius:16px;background:rgba(8,28,40,.74);backdrop-filter:blur(16px);box-shadow:0 18px 48px rgba(0,0,0,.25);font:800 10px/1.25 'Plus Jakarta Sans';letter-spacing:.06em;color:#eafafa;text-transform:uppercase;transform:translateZ(90px);animation:uChip 5s ease-in-out infinite}
-.u-chip b{display:block;color:#72dace;font-size:16px;letter-spacing:-.02em;margin-bottom:4px}
-.u-chip.c1{top:5%;right:-2%;animation-delay:-1s}.u-chip.c2{bottom:8%;left:-5%;animation-delay:-2.4s}.u-chip.c3{top:45%;right:-9%;animation-delay:-3.2s}
-@keyframes uChip{50%{transform:translateZ(90px) translateY(-11px)}}
-.u-ring{position:absolute;border:1px solid rgba(114,218,206,.15);border-radius:50%;pointer-events:none;animation:uRing 10s linear infinite}
-.u-ring.r1{width:510px;height:510px}.u-ring.r2{width:650px;height:650px;animation-direction:reverse;animation-duration:14s}
-.u-ring::before{content:"";position:absolute;top:50%;left:-4px;width:8px;height:8px;border-radius:50%;background:#72dace;box-shadow:0 0 22px rgba(114,218,206,.9)}
-@keyframes uRing{to{transform:rotate(360deg)}}
-
-/* cinematic section transition */
-.u-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(114,218,206,.6),rgba(230,195,111,.6),transparent);box-shadow:0 0 20px rgba(114,218,206,.22);position:relative;overflow:visible}
-.u-divider::after{content:"";position:absolute;top:-1px;width:120px;height:3px;background:linear-gradient(90deg,transparent,#fff,transparent);filter:blur(.4px);animation:uScanner 4s linear infinite}
-@keyframes uScanner{from{left:-140px}to{left:calc(100% + 140px)}}
-
-/* global premium motion */
-body.motion-ultra .ticker{position:relative;z-index:3;box-shadow:0 14px 40px rgba(7,25,37,.08)}
-body.motion-ultra .section{position:relative}
-body.motion-ultra .section::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(114,218,206,.08),transparent 70%);filter:blur(12px);left:-300px;top:12%;pointer-events:none}
-.u-reveal{opacity:0;transform:translate3d(0,44px,0) scale(.985);filter:blur(10px);transition:opacity .95s ease,transform .95s cubic-bezier(.2,.78,.2,1),filter .95s ease}
-.u-reveal.u-in{opacity:1;transform:none;filter:none}
-body.motion-ultra .why-premium-grid article,body.motion-ultra .core-service-card,body.motion-ultra .price-card,body.motion-ultra .presence-copy,body.motion-ultra .presence-visual{position:relative;overflow:hidden;isolation:isolate;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,border-color .35s ease}
-body.motion-ultra .u-cardfx::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;background:radial-gradient(360px circle at var(--cx,50%) var(--cy,50%),rgba(114,218,206,.22),transparent 65%);opacity:0;transition:opacity .3s ease}
-body.motion-ultra .u-cardfx:hover::after{opacity:1}
-body.motion-ultra .u-cardfx:hover{transform:translateY(-8px);box-shadow:0 28px 70px rgba(12,41,70,.16)}
-body.motion-ultra .u-cardfx>*{position:relative;z-index:1}
-body.motion-ultra img{transition:transform .75s cubic-bezier(.2,.8,.2,1),filter .55s ease}
-body.motion-ultra .core-service-card:hover img,body.motion-ultra .presence-visual:hover img{transform:scale(1.035)}
-body.motion-ultra .section-head h2{position:relative}
-body.motion-ultra .section-head h2::after{content:"";display:block;margin-top:14px;width:min(180px,32%);height:2px;background:linear-gradient(90deg,#0ca89b,#72dace,#e6c36f);transform-origin:left;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
-body.motion-ultra .section-head.u-in h2::after,body.motion-ultra .section-head.visible h2::after{transform:scaleX(1)}
-
-/* cursor */
-.u-cursor,.u-cursor-dot{position:fixed;left:0;top:0;pointer-events:none;z-index:100000;border-radius:50%;display:none}
-@media (hover:hover) and (pointer:fine){.u-cursor{display:block;width:34px;height:34px;border:1px solid rgba(114,218,206,.6);box-shadow:0 0 28px rgba(114,218,206,.18);transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s,background .2s}.u-cursor-dot{display:block;width:5px;height:5px;background:#72dace;box-shadow:0 0 15px rgba(114,218,206,.9);transform:translate(-50%,-50%)}body.u-hover .u-cursor{width:56px;height:56px;background:rgba(114,218,206,.08);border-color:rgba(114,218,206,.35)}}
-
-.u-mode{position:fixed;left:18px;bottom:18px;z-index:100001;display:flex;align-items:center;gap:8px;padding:7px 8px 7px 12px;border:1px solid rgba(114,218,206,.2);border-radius:999px;background:rgba(5,20,29,.82);backdrop-filter:blur(16px);color:#dff8f5;font:800 9px/1 'Plus Jakarta Sans';letter-spacing:.11em;text-transform:uppercase;box-shadow:0 18px 46px rgba(0,0,0,.24)}
-.u-mode button{border:0;border-radius:999px;padding:9px 12px;background:linear-gradient(135deg,#72dace,#0ca89b);color:#04202a;font:900 9px/1 'Plus Jakarta Sans';letter-spacing:.08em;cursor:pointer}
-body:not(.motion-ultra) .u-canvas,body:not(.motion-ultra) .u-aurora,body:not(.motion-ultra) .u-noise,body:not(.motion-ultra) .u-visual,body:not(.motion-ultra) .u-divider,body:not(.motion-ultra) .u-cursor,body:not(.motion-ultra) .u-cursor-dot{display:none!important}
-body:not(.motion-ultra) .u-mode{background:rgba(247,249,250,.92);color:#0c2946;border-color:rgba(12,41,70,.15)}
-
-@media(max-width:1080px){body.motion-ultra .hero-premium{grid-template-columns:1fr!important;min-height:auto!important;padding-top:140px!important}.u-visual{min-height:500px}.u-browser-wrap{width:min(92%,760px)}body.motion-ultra .hero-premium h1{font-size:clamp(50px,8vw,86px)!important}.u-chip.c3{right:-1%}}
-@media(max-width:700px){body.motion-ultra .hero-premium{padding:118px 20px 68px!important;gap:28px!important}.u-visual{min-height:340px}.u-ring{display:none}.u-chip{padding:9px 10px;font-size:8px}.u-chip b{font-size:13px}.u-chip.c1{right:0}.u-chip.c2{left:0}.u-chip.c3{right:0}.u-browser{border-radius:20px}.u-browser-bar{height:38px}.u-browser-address{height:21px}.u-mode{left:10px;bottom:10px}.u-cursor,.u-cursor-dot{display:none!important}}
-@media(prefers-reduced-motion:reduce){.u-mode{display:none}.u-canvas,.u-cursor,.u-cursor-dot{display:none!important}body.motion-ultra *{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.u-reveal{opacity:1!important;transform:none!important;filter:none!important}}
-
-/* ===== MOTION MAX V3.1 — CINEMATIC / SCROLLYTELLING LAYER ===== */
-body.motion-ultra{--mx-accent:#72dace;--mx-gold:#e6c36f;--mx-dark:#02080d;overflow-x:clip}
-body.motion-ultra::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;background:radial-gradient(520px circle at var(--u-mx) var(--u-my),rgba(114,218,206,.055),transparent 68%);mix-blend-mode:multiply}
-
-/* cinematic boot */
-.u-boot{position:fixed;inset:0;z-index:200000;display:grid;place-items:center;background:#02080d;color:#fff;overflow:hidden;transition:opacity .65s ease,visibility .65s ease}
-.u-boot.off{opacity:0;visibility:hidden;pointer-events:none}
-.u-boot::before{content:"";position:absolute;inset:-15%;background:repeating-linear-gradient(90deg,rgba(114,218,206,.035) 0 1px,transparent 1px 64px),repeating-linear-gradient(0deg,rgba(114,218,206,.035) 0 1px,transparent 1px 64px);transform:perspective(600px) rotateX(62deg) translateY(24%);transform-origin:center bottom;animation:mxBootGrid 2.2s linear infinite}
-@keyframes mxBootGrid{to{background-position:64px 64px}}
-.u-boot-core{position:relative;text-align:center;z-index:2;width:min(920px,90vw)}
-.u-boot-logo{width:88px;height:88px;margin:0 auto 28px;border-radius:26px;display:grid;place-items:center;font:900 42px/1 'Plus Jakarta Sans';color:#061820;background:linear-gradient(135deg,#dffffb,#72dace 52%,#0ca89b);box-shadow:0 0 0 1px rgba(255,255,255,.35),0 0 70px rgba(114,218,206,.32);animation:mxBootLogo 1.2s cubic-bezier(.2,.9,.2,1) both}
-@keyframes mxBootLogo{0%{opacity:0;transform:scale(.55) rotate(-12deg);filter:blur(15px)}70%{transform:scale(1.06) rotate(2deg)}100%{opacity:1;transform:none;filter:none}}
-.u-boot-kicker{font:800 10px/1 'Plus Jakarta Sans';letter-spacing:.28em;color:#72dace;text-transform:uppercase;opacity:.8}
-.u-boot-title{margin:14px 0 18px;font:800 clamp(38px,7vw,88px)/.9 'Plus Jakarta Sans';letter-spacing:-.075em;text-transform:uppercase;background:linear-gradient(90deg,#fff 0 38%,#72dace 54%,#e6c36f 76%,#fff);background-size:180% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:mxBootText 2s ease both,mxBootShine 2.8s linear infinite}
-@keyframes mxBootText{from{opacity:0;transform:translateY(32px);filter:blur(18px)}to{opacity:1;transform:none;filter:none}}
-@keyframes mxBootShine{to{background-position:180% center}}
-.u-boot-sub{font:700 11px/1 'Plus Jakarta Sans';letter-spacing:.18em;color:rgba(255,255,255,.48);text-transform:uppercase}
-.u-boot-line{height:2px;width:min(620px,76vw);margin:28px auto 0;background:rgba(255,255,255,.07);overflow:hidden;position:relative}
-.u-boot-line::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0ca89b,#72dace,#e6c36f);transform-origin:left;animation:mxBootProgress 2.05s cubic-bezier(.15,.7,.15,1) both}
-@keyframes mxBootProgress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.u-boot-skip{position:absolute;right:22px;bottom:20px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.04);color:rgba(255,255,255,.62);border-radius:999px;padding:10px 14px;font:800 9px/1 'Plus Jakarta Sans';letter-spacing:.12em;cursor:pointer}
-
-/* extra hero energy */
-.u-hero-word{position:absolute;left:-.03em;bottom:-.19em;z-index:-1;font:900 clamp(150px,23vw,390px)/.78 'Plus Jakarta Sans';letter-spacing:-.09em;color:transparent;-webkit-text-stroke:1px rgba(114,218,206,.075);white-space:nowrap;pointer-events:none;animation:mxHeroWord 12s ease-in-out infinite alternate}
-@keyframes mxHeroWord{to{transform:translateX(-3vw);-webkit-text-stroke-color:rgba(230,195,111,.08)}}
-.u-energy{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:visible;opacity:.82}
-.u-energy path{fill:none;stroke:url(#mxLine);stroke-width:1.2;stroke-dasharray:7 16;animation:mxDash 11s linear infinite;filter:drop-shadow(0 0 7px rgba(114,218,206,.45))}
-.u-energy .p2{animation-duration:15s;animation-direction:reverse;opacity:.55}.u-energy .p3{animation-duration:9s;opacity:.35}
-@keyframes mxDash{to{stroke-dashoffset:-460}}
-.u-flare{position:absolute;width:11px;height:11px;border-radius:50%;background:#efffff;box-shadow:0 0 12px #fff,0 0 30px #72dace,0 0 70px rgba(114,218,206,.7);z-index:8;pointer-events:none}
-.u-flare.f1{left:13%;top:24%;animation:mxFlare1 7s ease-in-out infinite}.u-flare.f2{right:4%;top:18%;animation:mxFlare2 9s ease-in-out infinite}.u-flare.f3{right:22%;bottom:15%;animation:mxFlare3 6s ease-in-out infinite}
-@keyframes mxFlare1{50%{transform:translate(40px,80px) scale(.45);opacity:.2}}@keyframes mxFlare2{50%{transform:translate(-90px,36px) scale(1.8);opacity:.25}}@keyframes mxFlare3{50%{transform:translate(30px,-70px) scale(.65);opacity:.35}}
-body.motion-ultra .hero-premium h1{position:relative}
-body.motion-ultra .hero-premium h1::before{content:"";position:absolute;left:-34px;top:-30px;width:72px;height:72px;border-left:1px solid rgba(114,218,206,.35);border-top:1px solid rgba(114,218,206,.35);border-radius:20px 0 0 0;opacity:.45;animation:mxCorner 4s ease-in-out infinite}
-@keyframes mxCorner{50%{transform:translate(-5px,-5px);opacity:.8}}
-
-/* stronger 3d visual */
-.u-browser-wrap::before,.u-browser-wrap::after{content:"";position:absolute;inset:-9%;border-radius:42px;z-index:-3;border:1px solid rgba(114,218,206,.12);transform:translateZ(-80px) rotate(4deg);animation:mxFrame 9s ease-in-out infinite alternate}
-.u-browser-wrap::after{inset:-17%;border-color:rgba(230,195,111,.08);transform:translateZ(-140px) rotate(-5deg);animation-delay:-3s}
-@keyframes mxFrame{to{transform:translateZ(-80px) rotate(-4deg) scale(1.02)}}
-.u-browser{box-shadow:0 55px 135px rgba(0,0,0,.58),0 0 0 1px rgba(114,218,206,.08),inset 0 1px 0 rgba(255,255,255,.14)!important}
-.u-screen::before{content:"";position:absolute;z-index:3;left:-15%;right:-15%;height:2px;top:12%;background:linear-gradient(90deg,transparent,#72dace,#fff,#e6c36f,transparent);box-shadow:0 0 20px rgba(114,218,206,.65);opacity:.75;animation:mxScanScreen 4.8s ease-in-out infinite}
-@keyframes mxScanScreen{0%,12%{top:8%;opacity:0}25%{opacity:.85}78%{top:88%;opacity:.45}100%{top:94%;opacity:0}}
-.u-hud{position:absolute;inset:15px;z-index:5;pointer-events:none}
-.u-hud-corner{position:absolute;width:30px;height:30px;border-color:rgba(114,218,206,.55);border-style:solid}.u-hud-corner.a{left:0;top:0;border-width:1px 0 0 1px}.u-hud-corner.b{right:0;top:0;border-width:1px 1px 0 0}.u-hud-corner.c{left:0;bottom:0;border-width:0 0 1px 1px}.u-hud-corner.d{right:0;bottom:0;border-width:0 1px 1px 0}
-.u-hud-label{position:absolute;top:7px;right:10px;color:#c7fff8;font:800 8px/1 'Plus Jakarta Sans';letter-spacing:.16em;text-transform:uppercase;text-shadow:0 0 14px rgba(114,218,206,.6)}
-
-/* metric ribbon */
-.u-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px;max-width:690px}
-.u-metric{position:relative;padding:14px 16px;border-radius:15px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.035);overflow:hidden;backdrop-filter:blur(14px)}
-.u-metric::after{content:"";position:absolute;inset:auto -25% 0;height:1px;background:linear-gradient(90deg,transparent,#72dace,transparent);animation:mxMetric 3.2s linear infinite}
-@keyframes mxMetric{from{transform:translateX(-40%)}to{transform:translateX(40%)}}
-.u-metric b{display:block;color:#fff;font:800 22px/1 'Plus Jakarta Sans';letter-spacing:-.05em}.u-metric small{display:block;margin-top:6px;color:rgba(230,245,248,.48);font:700 8px/1 'Plus Jakarta Sans';letter-spacing:.12em;text-transform:uppercase}
-
-/* SCROLL STORY */
-.u-story{height:255vh;position:relative;background:#030b11;color:#fff;isolation:isolate;overflow:visible}
-.u-story::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 620px at 70% 28%,rgba(12,168,155,.13),transparent 70%),radial-gradient(700px 500px at 22% 68%,rgba(230,195,111,.07),transparent 72%),linear-gradient(180deg,#030b11,#061723 72%,#f7f9fa 100%);z-index:-3}
-.u-story::after{content:"MICROPCEXPRESS";position:absolute;left:-.03em;top:32vh;font:900 clamp(110px,17vw,280px)/1 'Plus Jakarta Sans';letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(114,218,206,.055);white-space:nowrap;z-index:-2;transform:translateX(calc(var(--story-p,0) * -24vw));transition:transform .08s linear}
-.u-story-sticky{position:sticky;top:0;height:100dvh;min-height:680px;display:grid;grid-template-columns:minmax(330px,.75fr) minmax(520px,1.25fr);gap:clamp(28px,6vw,100px);align-items:center;padding:96px clamp(26px,7vw,110px) 46px}
-.u-story-copy{position:relative;z-index:3}.u-story-eyebrow{display:inline-flex;align-items:center;gap:9px;color:#9eece3;font:800 9px/1 'Plus Jakarta Sans';letter-spacing:.18em;text-transform:uppercase}.u-story-eyebrow::before{content:"";width:28px;height:1px;background:#72dace;box-shadow:0 0 12px rgba(114,218,206,.6)}
-.u-story-title{margin:22px 0 28px;font:800 clamp(44px,5vw,82px)/.92 'Plus Jakarta Sans';letter-spacing:-.065em;text-transform:uppercase}.u-story-title span{background:linear-gradient(100deg,#72dace,#e6c36f);-webkit-background-clip:text;background-clip:text;color:transparent}
-.u-story-steps{display:grid;gap:12px;margin-top:28px}.u-story-step{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:15px 16px;border:1px solid rgba(255,255,255,.08);border-radius:17px;background:rgba(255,255,255,.025);opacity:.42;transform:translateX(0);transition:.45s ease}.u-story-step.active{opacity:1;transform:translateX(12px);border-color:rgba(114,218,206,.28);background:linear-gradient(90deg,rgba(114,218,206,.09),rgba(255,255,255,.025));box-shadow:0 18px 48px rgba(0,0,0,.22)}
-.u-story-step em{font:800 10px/38px 'Plus Jakarta Sans';font-style:normal;width:38px;height:38px;text-align:center;border-radius:50%;background:rgba(114,218,206,.1);color:#72dace}.u-story-step b{display:block;font:800 13px/1.1 'Plus Jakarta Sans';letter-spacing:.04em}.u-story-step p{margin:5px 0 0;color:rgba(232,245,248,.52);font:500 12px/1.45 'Plus Jakarta Sans'}
-.u-story-progress{height:3px;background:rgba(255,255,255,.07);border-radius:99px;margin-top:22px;overflow:hidden}.u-story-progress i{display:block;height:100%;width:calc(var(--story-p,0) * 100%);background:linear-gradient(90deg,#0ca89b,#72dace,#e6c36f);box-shadow:0 0 18px rgba(114,218,206,.55)}
-.u-story-endcap{position:absolute;left:0;right:0;bottom:-1px;height:110px;pointer-events:none;background:linear-gradient(180deg,transparent 0%,rgba(247,249,250,.32) 62%,#f7f9fa 100%);z-index:6}
-
-.u-story-stage{height:min(70vh,680px);position:relative;perspective:1500px;transform-style:preserve-3d}
-.u-story-orbit{position:absolute;left:50%;top:50%;width:min(58vw,760px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(114,218,206,.11);transform:translate(-50%,-50%) rotateX(67deg);box-shadow:0 0 90px rgba(114,218,206,.055) inset}.u-story-orbit::after{content:"";position:absolute;left:12%;top:50%;width:9px;height:9px;border-radius:50%;background:#72dace;box-shadow:0 0 22px #72dace;animation:mxOrbitDot 8s linear infinite}@keyframes mxOrbitDot{to{transform:rotate(360deg);transform-origin:290px center}}
-.u-story-screen{position:absolute;inset:8% 4%;border-radius:34px;border:1px solid rgba(255,255,255,.13);background:linear-gradient(155deg,rgba(13,40,56,.84),rgba(5,17,26,.92));backdrop-filter:blur(22px);box-shadow:0 55px 140px rgba(0,0,0,.52),inset 0 1px rgba(255,255,255,.12);overflow:hidden;transform-style:preserve-3d;transition:opacity .5s ease,transform .75s cubic-bezier(.2,.8,.2,1),filter .5s ease;opacity:0;filter:blur(16px);transform:translate3d(0,70px,-120px) rotateX(10deg) scale(.9)}
-.u-story-screen.active{opacity:1;filter:none;transform:translate3d(0,0,35px) rotateX(0) scale(1)}
-.u-story-screen.prev{opacity:.16;filter:blur(6px);transform:translate3d(-10%,-10%,-100px) rotateY(9deg) scale(.91)}
-.u-story-screen.next{opacity:.12;filter:blur(8px);transform:translate3d(10%,10%,-120px) rotateY(-9deg) scale(.88)}
-.u-story-bar{height:48px;display:flex;align-items:center;gap:8px;padding:0 16px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025)}.u-story-bar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3)}.u-story-bar span{margin-left:auto;color:rgba(255,255,255,.36);font:800 8px/1 'Plus Jakarta Sans';letter-spacing:.14em;text-transform:uppercase}
-.u-web-scene{height:calc(100% - 48px);position:relative;overflow:hidden}.u-web-scene img{width:100%;height:100%;object-fit:cover;filter:brightness(.56) saturate(1.05);transform:scale(1.05)}.u-web-scene::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,11,17,.88) 2%,rgba(3,11,17,.25) 58%,rgba(3,11,17,.48)),radial-gradient(circle at 70% 24%,rgba(114,218,206,.16),transparent 42%)}
-.u-web-copy{position:absolute;left:7%;top:18%;z-index:2;max-width:58%}.u-web-copy small{color:#72dace;font:800 9px/1 'Plus Jakarta Sans';letter-spacing:.18em}.u-web-copy strong{display:block;margin:14px 0;font:800 clamp(28px,3vw,50px)/.96 'Plus Jakarta Sans';letter-spacing:-.06em}.u-web-copy p{color:rgba(255,255,255,.57);font:500 13px/1.6 'Plus Jakarta Sans'}
-.u-dash{height:calc(100% - 48px);padding:22px;display:grid;grid-template-columns:1.1fr .9fr;grid-template-rows:auto 1fr;gap:14px}.u-kpis{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.u-kpi,.u-chart,.u-list{border:1px solid rgba(255,255,255,.07);border-radius:18px;background:rgba(255,255,255,.035);padding:14px;position:relative;overflow:hidden}.u-kpi b{font:800 clamp(21px,2.4vw,36px)/1 'Plus Jakarta Sans';letter-spacing:-.05em}.u-kpi span{display:block;margin-top:6px;color:rgba(255,255,255,.42);font:700 8px/1 'Plus Jakarta Sans';letter-spacing:.12em;text-transform:uppercase}.u-kpi::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,#0ca89b,#72dace);transform-origin:left;animation:mxKpi 3s ease-in-out infinite alternate}@keyframes mxKpi{from{transform:scaleX(.18)}to{transform:scaleX(.9)}}
-.u-chart{display:flex;align-items:flex-end;gap:9px;padding-top:54px}.u-chart::before{content:"EVOLUCIÓN DE VENTAS";position:absolute;top:16px;left:16px;color:rgba(255,255,255,.46);font:800 8px/1 'Plus Jakarta Sans';letter-spacing:.12em}.u-chart i{flex:1;border-radius:8px 8px 2px 2px;background:linear-gradient(180deg,#72dace,#0ca89b);height:var(--h);box-shadow:0 0 18px rgba(114,218,206,.14);animation:mxBar 2.4s ease-in-out infinite alternate;animation-delay:var(--d)}@keyframes mxBar{to{height:calc(var(--h) * .72)}}
-.u-list strong{font:800 10px/1 'Plus Jakarta Sans';letter-spacing:.12em;color:#72dace}.u-list ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}.u-list li{display:grid;grid-template-columns:1fr auto;gap:8px;padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,.06);font:700 10px/1 'Plus Jakarta Sans';color:rgba(255,255,255,.66)}.u-list li b{color:#fff}
-.u-auto{height:calc(100% - 48px);display:grid;place-items:center;position:relative}.u-auto-ring{position:absolute;width:72%;aspect-ratio:1;border:1px solid rgba(114,218,206,.12);border-radius:50%;animation:mxAutoRing 18s linear infinite}.u-auto-ring.r2{width:54%;animation-direction:reverse;animation-duration:12s}.u-auto-ring::before{content:"";position:absolute;top:50%;left:-5px;width:10px;height:10px;border-radius:50%;background:#72dace;box-shadow:0 0 24px #72dace}@keyframes mxAutoRing{to{transform:rotate(360deg)}}
-.u-auto-core{width:210px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;padding:28px;background:radial-gradient(circle at 34% 28%,rgba(114,218,206,.22),rgba(7,27,39,.95) 58%);border:1px solid rgba(114,218,206,.24);box-shadow:0 0 90px rgba(114,218,206,.16),inset 0 0 50px rgba(114,218,206,.08);z-index:2}.u-auto-core b{font:800 24px/.95 'Plus Jakarta Sans';letter-spacing:-.04em}.u-auto-core span{color:#72dace;font:800 8px/1.4 'Plus Jakarta Sans';letter-spacing:.14em;text-transform:uppercase}
-.u-auto-node{position:absolute;padding:11px 14px;border-radius:14px;background:rgba(8,29,42,.88);border:1px solid rgba(255,255,255,.08);font:800 9px/1 'Plus Jakarta Sans';letter-spacing:.08em;color:#dffffb;box-shadow:0 16px 40px rgba(0,0,0,.25);animation:mxNode 4s ease-in-out infinite}.u-auto-node.n1{left:8%;top:20%}.u-auto-node.n2{right:8%;top:22%;animation-delay:-1s}.u-auto-node.n3{left:10%;bottom:16%;animation-delay:-2s}.u-auto-node.n4{right:10%;bottom:18%;animation-delay:-3s}@keyframes mxNode{50%{transform:translateY(-12px);border-color:rgba(114,218,206,.28)}}
-
-/* more kinetic section transitions */
-body.motion-ultra .section-head h2,body.motion-ultra .manifesto h2{background-image:linear-gradient(90deg,currentColor 0 84%,#0ca89b 94%,#72dace);background-size:180% 100%;background-position:0 0;transition:background-position 1.2s ease;-webkit-background-clip:text;background-clip:text}
-body.motion-ultra .section-head.u-in h2{background-position:70% 0}
-body.motion-ultra .why-premium-grid article::before{content:"";position:absolute;inset:-60% 70% -60% -35%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);opacity:0;transition:1s ease}.why-premium-grid article:hover::before{left:120%;right:-30%;opacity:.45}
-body.motion-ultra .pricing .featured{animation:mxFeatured 4.8s ease-in-out infinite}@keyframes mxFeatured{50%{transform:translateY(-7px);box-shadow:0 32px 90px rgba(12,168,155,.18)}}
-
-/* base-mode exclusions */
-body:not(.motion-ultra) .u-story,body:not(.motion-ultra) .u-hero-word,body:not(.motion-ultra) .u-energy,body:not(.motion-ultra) .u-flare,body:not(.motion-ultra) .u-metrics,body:not(.motion-ultra) .u-hud{display:none!important}
-.u-mode span{font-size:0}.u-mode span::after{content:"MOTION MAX V3.1";font-size:9px}
-
-@media(max-width:1080px){.u-story{height:auto;min-height:0}.u-story-sticky{position:relative;height:auto;min-height:900px;grid-template-columns:1fr;padding-top:100px}.u-story-stage{height:620px}.u-story-copy{max-width:760px}.u-story::after{top:25%;}.u-metrics{max-width:none}.u-story-orbit{width:min(82vw,700px)}}
-@media(max-width:700px){.u-boot-title{font-size:clamp(38px,13vw,64px)}.u-hero-word{display:none}.u-energy{opacity:.38}.u-metrics{grid-template-columns:1fr 1fr}.u-metric:last-child{grid-column:1/-1}.u-story-sticky{padding:90px 18px 60px;min-height:1080px}.u-story-title{font-size:46px}.u-story-stage{height:470px}.u-story-screen{inset:4% 0;border-radius:24px}.u-kpis{grid-template-columns:1fr 1fr}.u-dash{grid-template-columns:1fr;overflow:auto}.u-chart{min-height:150px}.u-list{display:none}.u-web-copy{max-width:80%;left:7%;top:13%}.u-auto-core{width:160px}.u-auto-node{font-size:7px}.u-auto-node.n1,.u-auto-node.n3{left:2%}.u-auto-node.n2,.u-auto-node.n4{right:2%}}
-@media(prefers-reduced-motion:reduce){.u-boot{display:none!important}.u-story{height:auto}.u-story-sticky{position:relative;height:auto}.u-story-screen{position:relative;opacity:1!important;filter:none!important;transform:none!important;margin:16px 0}.u-story-stage{height:auto}.u-story-orbit{display:none}}
-
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#071a34" />
+  <title>MicroPCExpress — Web, software y automatización en Panamá</title>
+  <meta name="description" content="Páginas web, sistemas, dashboards, inventario, reservas y automatización para negocios en David, Chiriquí y Panamá." />
+  <link rel="canonical" href="https://micropcexpress-web.ercoronado17.workers.dev/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_PA" />
+  <meta property="og:title" content="MicroPCExpress — Convierte tus ideas en sistemas que realmente funcionan" />
+  <meta property="og:description" content="Páginas web, sistemas, dashboards y automatizaciones diseñadas para ayudar a tu negocio a crecer, organizarse y vender mejor." />
+  <meta property="og:image" content="assets/og-cover.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"MicroPCExpress Web Digital Services",
+    "founder":"Erik Coronado",
+    "telephone":"+50760124997",
+    "areaServed":"Panamá",
+    "address":{"@type":"PostalAddress","addressLocality":"David","addressRegion":"Chiriquí","addressCountry":"PA"},
+    "url":"https://micropcexpress-web.ercoronado17.workers.dev/",
+    "sameAs":[]
+  }
+  </script>
 </head>
-<body class="motion-ultra">
-<div class="u-boot" id="uBoot" aria-hidden="true"><div class="u-boot-core"><div class="u-boot-logo">M</div><div class="u-boot-kicker">MicroPCExpress · Digital Systems</div><div class="u-boot-title">BUILD THE FUTURE.</div><div class="u-boot-sub">WEB · SOFTWARE · AUTOMATIZACIÓN · EXPERIENCIAS DIGITALES</div><div class="u-boot-line"></div></div><button class="u-boot-skip" id="uBootSkip" type="button">SALTAR INTRO</button></div>
-<div class="u-cursor" id="uCursor"></div><div class="u-cursor-dot" id="uCursorDot"></div>
-<div class="u-mode"><span>MOTION ULTRA</span><button id="uToggle" type="button">VER BASE</button></div>
-<div class="progress" id="progress"></div>
+<body>
+<a class="skip-link" href="#soluciones">Saltar al contenido</a>
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
 
-<!-- HEADER -->
-<header class="header" id="header">
-  <a href="#inicio" class="brand">
-    <span class="brand-icon">M</span>
-    <span><strong>MicroPCExpress</strong><small>WEB DIGITAL SERVICES</small></span>
-  </a>
-  <nav class="desktop-nav">
-    <a href="#inicio">Inicio</a>
-    <a href="#soluciones">Soluciones</a>
-    <a href="#presencia-digital">Redes Sociales</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#precios">Precios</a>
-    <a href="#diagnostico">Diagnóstico</a>
-  </nav>
-  <div class="header-right">
-    <span class="header-contact-hint">Erik Coronado · +507 6012-4997</span>
-    <a class="header-cta magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20quiero%20conversar%20sobre%20MicroPCExpress%20para%20mi%20negocio." target="_blank" rel="noopener">HABLA CON ERIK ↗</a>
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="brand" href="#inicio" aria-label="MicroPCExpress — inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 42 34" role="img"><path d="M3 26.5 13.5 7.8c1.7-3 6-3 7.7 0l5.4 9.6 4.2-7.4c1.7-3 6-3 7.7 0L42 16v10.5h-7.3l-7.5-13.2-6 10.5h-7.6l4.2-7.4-3.3-5.9L5.4 26.5H3Z"/></svg>
+      </span>
+      <span class="brand-copy"><span class="brand-text">MicroPCExpress</span><span class="brand-subtext">WEB DIGITAL SERVICES</span></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#inicio" data-nav="inicio">Inicio</a>
+      <a href="#soluciones" data-nav="soluciones">Soluciones</a>
+      <a href="#casos" data-nav="casos">Casos de uso</a>
+      <a href="#proceso" data-nav="proceso">Proceso</a>
+      <a href="#precios" data-nav="precios">Precios</a>
+      <a href="#sobre" data-nav="sobre">Sobre MicroPCExpress</a>
+      <a href="#diagnostico" data-nav="diagnostico">Qué necesitas</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-cta magnetic" href="#contacto">Hablemos <span>→</span></a>
+      <button class="menu-button" id="menuOpen" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+    </div>
   </div>
-  <button class="menu-btn" id="menuBtn" aria-label="Abrir menú de navegación"><span></span><span></span></button>
 </header>
 
-<!-- MENÚ OVERLAY FULLSCREEN -->
-<div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Navegación principal" aria-hidden="true">
-  <div class="menu-head">
-    <a class="brand">
-      <span class="brand-icon">M</span>
-      <span><strong>MicroPCExpress</strong><small>WEB DIGITAL SERVICES</small></span>
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menú principal">
+  <div class="menu-top">
+    <a class="brand" href="#inicio" data-menu-link>
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 34"><path d="M3 26.5 13.5 7.8c1.7-3 6-3 7.7 0l5.4 9.6 4.2-7.4c1.7-3 6-3 7.7 0L42 16v10.5h-7.3l-7.5-13.2-6 10.5h-7.6l4.2-7.4-3.3-5.9L5.4 26.5H3Z"/></svg></span>
+      <span class="brand-copy"><span class="brand-text">MicroPCExpress</span><span class="brand-subtext">WEB DIGITAL SERVICES</span></span>
     </a>
-    <button id="menuClose" aria-label="Cerrar menú">CERRAR ×</button>
+    <button class="menu-close" id="menuClose" type="button" aria-label="Cerrar menú">×</button>
   </div>
-  <ol class="menu-list">
-    <li><a href="#inicio"><em>01</em><span>INICIO</span></a></li>
-    <li><a href="#soluciones"><em>02</em><span>SOLUCIONES</span></a></li>
-    <li><a href="#presencia-digital"><em>03</em><span>REDES SOCIALES</span></a></li>
-    <li><a href="#industrias"><em>04</em><span>INDUSTRIAS</span></a></li>
-    <li><a href="#proceso"><em>05</em><span>PROCESO</span></a></li>
-    <li><a href="#precios"><em>06</em><span>PRECIOS</span></a></li>
-    <li><a href="#diagnostico"><em>07</em><span>DIAGNÓSTICO</span></a></li>
-    <li><a href="#contacto"><em>08</em><span>CONTACTO</span></a></li>
-  </ol>
-  <a class="menu-mobile-cta" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20vi%20la%20web%20de%20MicroPCExpress%20y%20quiero%20conversar%20sobre%20mi%20negocio." target="_blank" rel="noopener">HABLA CON ERIK POR WHATSAPP ↗</a>
+  <nav class="menu-nav" aria-label="Menú completo">
+    <a href="#inicio" data-menu-link><small>01</small><span>Inicio</span><b>↗</b></a>
+    <a href="#soluciones" data-menu-link><small>02</small><span>Soluciones</span><b>↗</b></a>
+    <a href="#casos" data-menu-link><small>03</small><span>Casos de uso</span><b>↗</b></a>
+    <a href="#motor" data-menu-link><small>04</small><span>Motor digital</span><b>↗</b></a>
+    <a href="#proceso" data-menu-link><small>05</small><span>Proceso</span><b>↗</b></a>
+    <a href="#precios" data-menu-link><small>06</small><span>Precios</span><b>↗</b></a>
+    <a href="#sobre" data-menu-link><small>07</small><span>Sobre MicroPCExpress</span><b>↗</b></a>
+    <a href="#diagnostico" data-menu-link><small>08</small><span>Qué necesitas</span><b>↗</b></a>
+    <a href="#contacto" data-menu-link><small>09</small><span>Hablemos</span><b>↗</b></a>
+  </nav>
   <div class="menu-foot">
-    <span>DAVID · CHIRIQUÍ · PANAMÁ</span>
-    <span>ERIK CORONADO · WHATSAPP: +507 6012-4997</span>
+    <div><small>UBICACIÓN</small><span>David · Chiriquí · Panamá</span></div>
+    <div><small>WHATSAPP</small><a href="https://wa.me/50760124997" target="_blank" rel="noopener">+507 6012-4997</a></div>
+    <div><small>ENFOQUE</small><span>Web · Software · Automatización</span></div>
   </div>
 </div>
 
 <main>
-<!-- HERO PREMIUM 4K -->
-<section class="hero hero-premium" id="inicio">
-  <canvas class="u-canvas" id="uCanvas" aria-hidden="true"></canvas>
-  <div class="u-hero-word" aria-hidden="true">DIGITAL</div>
-  <svg class="u-energy" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="mxLine" x1="0" x2="1"><stop offset="0" stop-color="#0ca89b" stop-opacity="0"/><stop offset=".45" stop-color="#72dace"/><stop offset=".72" stop-color="#e6c36f"/><stop offset="1" stop-color="#72dace" stop-opacity="0"/></linearGradient></defs><path d="M-80 720 C260 470 340 930 690 560 S1180 160 1690 390"/><path class="p2" d="M-30 180 C360 410 430 -20 810 260 S1280 720 1660 470"/><path class="p3" d="M120 930 C520 620 700 780 920 530 S1280 260 1540 -50"/></svg>
-  <i class="u-flare f1"></i><i class="u-flare f2"></i><i class="u-flare f3"></i>
+  <section class="hero" id="inicio">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
 
-  <span class="u-aurora a" aria-hidden="true"></span><span class="u-aurora b" aria-hidden="true"></span><span class="u-noise" aria-hidden="true"></span>
-  <div class="hero-mobile-scene" aria-hidden="true">
-    <img src="assets/hero-street-1280.webp" srcset="assets/hero-street-1280.webp 1280w, assets/hero-street-4k.webp 3840w" sizes="100vw" alt="" width="1280" height="720" fetchpriority="high" decoding="async" />
-  </div>
-  <div class="hero-scene" aria-hidden="true">
-    <span class="hero-glow glow-1"></span>
-    <span class="hero-glow glow-2"></span>
-    <span class="hero-glow glow-3"></span>
-    <span class="hero-glow glow-4"></span>
-    <span class="hero-glow glow-5"></span>
-  </div>
-  <div class="hero-premium-copy reveal hero-sequence">
-    <span class="eyebrow hero-eyebrow">PÁGINAS WEB Y SISTEMAS PARA NEGOCIOS EN PANAMÁ</span>
-    <h1>Tu negocio merece una vitrina digital que <span>venda por ti.</span></h1>
-    <p>Creamos páginas web, aplicaciones y sistemas a la medida para que más personas te encuentren, conozcan tus productos o servicios y te escriban fácilmente. Diseñado para negocios reales en David, Chiriquí y todo Panamá.</p>
-    <div class="hero-actions">
-      <a class="btn primary magnetic" href="https://wa.me/50760124997" target="_blank" rel="noopener">HABLA CON ERIK POR WHATSAPP ↗</a>
-      <a class="btn hero-ghost magnetic" href="#soluciones">EXPLORAR SOLUCIONES</a>
-    </div>
-
-    <div class="u-metrics" aria-hidden="true">
-      <div class="u-metric"><b data-mx-count="24">0</b><small>Presencia digital 24/7</small></div>
-      <div class="u-metric"><b data-mx-count="360">0</b><small>Visión completa del negocio</small></div>
-      <div class="u-metric"><b data-mx-count="1">0</b><small>Un ecosistema conectado</small></div>
-    </div>
-    <div class="hero-contact-row">
-      <span>⌖ David, Chiriquí, Panamá</span>
-      <span>☎ +507-6012-4997</span>
-      <span>↗ wa.me/50760124997</span>
-    </div>
-  </div>
-  <div class="u-visual" id="uVisual" aria-hidden="true">
-    <span class="u-ring r1"></span><span class="u-ring r2"></span>
-    <div class="u-browser-wrap" id="uBrowserWrap">
-      <div class="u-browser-glow"></div>
-      <div class="u-browser">
-        <div class="u-browser-bar"><i></i><i></i><i></i><div class="u-browser-address">MICROPCEXPRESS · EXPERIENCIA DIGITAL EN MOVIMIENTO</div></div>
-        <div class="u-screen">
-          <img src="assets/hero-street-4k.webp" alt="" />
-          <div class="u-hud"><i class="u-hud-corner a"></i><i class="u-hud-corner b"></i><i class="u-hud-corner c"></i><i class="u-hud-corner d"></i><span class="u-hud-label">LIVE DIGITAL EXPERIENCE</span></div>
-          <div class="u-screen-ui"><strong>Tu negocio, convertido en una experiencia digital.</strong><span>Web · Sistemas · Automatización</span></div>
+    <div class="hero-desktop">
+      <div class="hero-plane hero-plane-copy" data-parallax="-0.18">
+        <div class="hero-copy">
+          <div class="eyebrow intro-item" style="--delay:.10s">SOLUCIONES DIGITALES A TU MEDIDA</div>
+          <h1 class="hero-title intro-item mask-reveal" style="--delay:.18s">
+            <span>Convierte tus ideas</span>
+            <span>en sistemas que</span>
+            <span class="accent">realmente funcionan</span>
+          </h1>
+          <p class="hero-lede intro-item" style="--delay:.34s">Páginas web, sistemas, dashboards y automatizaciones diseñadas para ayudar a tu negocio a crecer, organizarse y vender mejor.</p>
+          <div class="hero-actions intro-item" style="--delay:.46s">
+            <a class="btn btn-primary magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20quiero%20conversar%20sobre%20mi%20proyecto." target="_blank" rel="noopener">Quiero un proyecto <span>→</span></a>
+            <a class="btn btn-ghost magnetic" href="#soluciones">Ver soluciones <span class="play-dot">▶</span></a>
+          </div>
+          <div class="hero-trust intro-item" style="--delay:.58s">
+            <span><i>◷</i> Entrega clara</span>
+            <span><i>◎</i> Soporte continuo</span>
+            <span><i>▥</i> Soluciones escalables</span>
+          </div>
         </div>
       </div>
-      <div class="u-chip c1"><b>+ VISIBILIDAD</b>Web profesional</div>
-      <div class="u-chip c2"><b>24/7</b>Tu vitrina activa</div>
-      <div class="u-chip c3"><b>DIRECTO</b>WhatsApp + clientes</div>
-    </div>
-  </div>
-</section>
-<div class="u-divider" aria-hidden="true"></div>
 
-<!-- MARQUEE DOUBLE TICKER -->
-<section class="ticker marquee">
-  <div class="marquee-track primary">
-    <span>WEB PROFESIONAL ✦ APLICACIONES ✦ INVENTARIO ✦ CLIENTES ✦ PEDIDOS ✦ RESERVAS ✦ COTIZACIONES ✦ AUTOMATIZACIÓN ✦ </span>
-    <span>WEB PROFESIONAL ✦ APLICACIONES ✦ INVENTARIO ✦ CLIENTES ✦ PEDIDOS ✦ RESERVAS ✦ COTIZACIONES ✦ AUTOMATIZACIÓN ✦ </span>
-  </div>
-  <div class="marquee-track secondary">
-    <span>RESTAURANTES — TIENDAS — CLÍNICAS — FARMACIAS — FERRETERÍAS — SALONES — CAFETERÍAS — SERVICIOS — </span>
-    <span>RESTAURANTES — TIENDAS — CLÍNICAS — FARMACIAS — FERRETERÍAS — SALONES — CAFETERÍAS — SERVICIOS — </span>
-  </div>
-</section>
-
-
-<!-- MOTION MAX SCROLL STORY -->
-<section class="u-story" id="uStory" aria-label="Experiencia digital MicroPCExpress">
-  <div class="u-story-sticky">
-    <div class="u-story-copy">
-      <span class="u-story-eyebrow">MOTION EXPERIENCE · 01—03</span>
-      <h2 class="u-story-title">NO SOLO UNA WEB.<br><span>UN MOTOR DIGITAL.</span></h2>
-      <div class="u-story-steps">
-        <article class="u-story-step active" data-story-step="0"><em>01</em><div><b>ATRAE</b><p>Una experiencia visual que convierte atención en confianza y conversaciones reales.</p></div></article>
-        <article class="u-story-step" data-story-step="1"><em>02</em><div><b>ORGANIZA</b><p>Ventas, clientes, inventario e indicadores convertidos en un sistema que puedes entender.</p></div></article>
-        <article class="u-story-step" data-story-step="2"><em>03</em><div><b>ESCALA</b><p>Automatizaciones y procesos conectados para que el negocio siga avanzando incluso cuando estás ocupado.</p></div></article>
-      </div>
-      <div class="u-story-progress"><i></i></div>
-    </div>
-    <div class="u-story-stage" aria-hidden="true">
-      <div class="u-story-orbit"></div>
-      <div class="u-story-screen active" data-story-screen="0">
-        <div class="u-story-bar"><i></i><i></i><i></i><span>01 · EXPERIENCIA WEB</span></div>
-        <div class="u-web-scene"><img src="assets/service-landing.webp" alt=""><div class="u-web-copy"><small>ATRAE · CONVIERTE · CONECTA</small><strong>Una presencia digital que se siente viva.</strong><p>Diseño, movimiento y llamadas a la acción trabajando juntos para que el visitante entienda tu valor en segundos.</p></div></div>
-      </div>
-      <div class="u-story-screen next" data-story-screen="1">
-        <div class="u-story-bar"><i></i><i></i><i></i><span>02 · CONTROL OPERATIVO</span></div>
-        <div class="u-dash"><div class="u-kpis"><div class="u-kpi"><b>+28%</b><span>Ventas</span></div><div class="u-kpi"><b>1,284</b><span>Clientes</span></div><div class="u-kpi"><b>96%</b><span>Procesos</span></div><div class="u-kpi"><b>24/7</b><span>Visibilidad</span></div></div><div class="u-chart"><i style="--h:35%;--d:-.3s"></i><i style="--h:48%;--d:-.8s"></i><i style="--h:42%;--d:-1.1s"></i><i style="--h:66%;--d:-.5s"></i><i style="--h:58%;--d:-1.4s"></i><i style="--h:78%;--d:-.7s"></i><i style="--h:92%;--d:-1.8s"></i></div><div class="u-list"><strong>ACTIVIDAD EN VIVO</strong><ul><li>Reserva recibida <b>+1</b></li><li>Pedido confirmado <b>$84</b></li><li>Stock actualizado <b>Auto</b></li><li>Cliente recurrente <b>VIP</b></li></ul></div></div>
-      </div>
-      <div class="u-story-screen next" data-story-screen="2">
-        <div class="u-story-bar"><i></i><i></i><i></i><span>03 · AUTOMATIZACIÓN</span></div>
-        <div class="u-auto"><div class="u-auto-ring"></div><div class="u-auto-ring r2"></div><div class="u-auto-core"><div><span>SISTEMA CONECTADO</span><b>TRABAJA<br>CONTIGO.</b></div></div><div class="u-auto-node n1">WEB / LEADS</div><div class="u-auto-node n2">WHATSAPP</div><div class="u-auto-node n3">CRM / CLIENTES</div><div class="u-auto-node n4">REPORTES</div></div>
-      </div>
-    </div>
-  </div>
-  <div class="u-story-endcap" aria-hidden="true"></div>
-</section>
-
-<!-- POR QUÉ + SERVICIOS PRINCIPALES DE LA NUEVA LANDING -->
-<section class="why-premium section">
-  <div class="section-head two reveal">
-    <div>
-      <span class="eyebrow">MÁS CLIENTES · MÁS VENTAS · MÁS CONTROL</span>
-      <h2>POR QUÉ TU NEGOCIO NECESITA ESTO.</h2>
-    </div>
-    <p>Hoy tus clientes te buscan primero en internet. Una buena presencia digital genera confianza, te ayuda a vender más y te permite competir mejor, sin importar el tamaño de tu negocio.</p>
-  </div>
-  <div class="why-premium-grid">
-    <article><em>01</em><h3>TE ENCUENTRAN MÁS FÁCIL</h3><p>Una presencia clara y profesional cuando tus clientes te buscan desde el celular.</p></article>
-    <article><em>02</em><h3>VENDES MIENTRAS ATIENDES</h3><p>Tu web puede mostrar productos, servicios, reservas y pedidos mientras tú sigues atendiendo el local.</p></article>
-    <article><em>03</em><h3>TRABAJAS CON MÁS ORDEN</h3><p>Inventario, clientes, reportes y procesos conectados reducen errores y tiempo perdido.</p></article>
-  </div>
-</section>
-
-<section class="core-services section">
-  <div class="section-head two reveal">
-    <div>
-      <span class="eyebrow">DOS PUERTAS DE ENTRADA</span>
-      <h2>EMPEZAMOS DONDE TU NEGOCIO MÁS LO NECESITA.</h2>
-    </div>
-    <p>Podemos comenzar por una presencia web que convierta o por una herramienta interna que te dé más control. Después conectamos lo demás cuando realmente aporte valor.</p>
-  </div>
-  <div class="core-service-grid">
-    <article class="core-service-card light reveal">
-      <div class="core-service-copy">
-        <span>01 · PRESENCIA Y VENTAS</span>
-        <h3>Landing pages a la medida</h3>
-        <p>Páginas diseñadas para tu negocio, tus clientes y tus objetivos. Nada de plantillas clonadas.</p>
-        <ul><li>Catálogo o menú</li><li>WhatsApp directo</li><li>Ubicación y horarios</li><li>Identidad propia</li></ul>
-        <a href="https://wa.me/50760124997" target="_blank" rel="noopener">QUIERO MI PÁGINA WEB ↗</a>
-      </div>
-      <img src="assets/service-landing.webp" alt="Ejemplo de landing page para negocio local" loading="lazy" />
-    </article>
-    <article class="core-service-card dark reveal delay-1">
-      <div class="core-service-copy">
-        <span>02 · OPERACIÓN Y CRECIMIENTO</span>
-        <h3>Software a la medida</h3>
-        <p>Herramientas que se adaptan a cómo trabajas: más orden, menos tareas repetitivas y mejores decisiones.</p>
-        <ul><li>Inventario y POS</li><li>CRM y clientes</li><li>Dashboards</li><li>Automatizaciones</li></ul>
-        <a href="https://wa.me/50760124997" target="_blank" rel="noopener">HABLEMOS DE TU SISTEMA ↗</a>
-      </div>
-      <img src="assets/service-software.webp" alt="Ejemplo de software a la medida" loading="lazy" />
-    </article>
-  </div>
-</section>
-
-
-<section class="social-presence section" id="presencia-digital">
-  <div class="section-head two reveal">
-    <div>
-      <span class="eyebrow">PÁGINA WEB + REDES SOCIALES</span>
-      <h2>ESTAR EN INTERNET NO ES SOLO TENER UNA WEB. <span>ES MANTENER TU NEGOCIO VIVO Y VISIBLE.</span></h2>
-    </div>
-    <p>Si tu negocio publica pero no tiene una página propia, pierde confianza. Si tiene página pero no publica, pierde visibilidad. La combinación correcta hace que te encuentren, te escriban y te recuerden.</p>
-  </div>
-
-  <div class="presence-grid">
-    <article class="presence-copy reveal">
-      <span class="eyebrow">PRESENCIA DIGITAL 360°</span>
-      <h3>Todo lo que tu negocio necesita para verse profesional en un solo lugar.</h3>
-      <p>Podemos construir tu landing page, conectar WhatsApp, preparar tu presencia en redes y dejar una base visual clara para que tu negocio proyecte más confianza desde el primer vistazo.</p>
-      <ul class="presence-list">
-        <li>Página web profesional con botón directo a WhatsApp.</li>
-        <li>Diseño para Instagram, Facebook y TikTok con identidad consistente.</li>
-        <li>Apoyo para Google Business Profile, contenido y campañas futuras.</li>
-        <li>Más orden, más visibilidad y menos improvisación en tu comunicación.</li>
-      </ul>
-      <div class="presence-actions">
-        <a class="btn primary magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20quiero%20una%20p%C3%A1gina%20web%20m%C3%A1s%20redes%20sociales%20para%20mi%20negocio." target="_blank" rel="noopener">QUIERO MI PRESENCIA DIGITAL</a>
-        <span class="presence-note">Ideal para tiendas, cafeterías, clínicas, farmacias, salones y servicios profesionales.</span>
-      </div>
-    </article>
-
-    <div class="presence-visual reveal">
-      <div class="orbit-stage" data-orbit-stage>
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="orbit-core">
-          <small>MICROPCEXPRESS</small>
-          <b>TU NEGOCIO EN TODAS PARTES</b>
-          <span>Web · Redes · WhatsApp · Google</span>
+      <div class="hero-plane hero-plane-dashboard" data-parallax="-0.08">
+        <div class="dashboard-shell intro-item" style="--delay:.28s" aria-label="Interfaz demostrativa de dashboard">
+          <div class="dashboard-topbar"><span class="window-dots"><i></i><i></i><i></i></span><span class="dash-brand"><b>◆</b> MicroPCExpress</span><div class="dash-search">Buscar… <span>×</span></div></div>
+          <div class="dashboard-body">
+            <aside class="dash-sidebar">
+              <div class="dash-logo">M</div>
+              <button class="active">⌂ <span>Inicio</span></button>
+              <button>□ <span>Productos</span></button>
+              <button>▤ <span>Ventas</span></button>
+              <button>◇ <span>Inventario</span></button>
+              <button>◉ <span>Clientes</span></button>
+              <button>▥ <span>Reportes</span></button>
+              <button>⚙ <span>Config.</span></button>
+            </aside>
+            <div class="dash-main">
+              <div class="dash-title-row"><div><small>DEMO EN VIVO</small><h2>Resumen general</h2></div><span class="demo-pill">INTERFAZ DEMOSTRATIVA</span></div>
+              <div class="dash-kpis">
+                <article class="kpi kpi-green"><small>Ventas hoy</small><b>$12,450</b><span>↗ 12%</span></article>
+                <article class="kpi kpi-blue"><small>Productos</small><b>248</b><span>↗ 5%</span></article>
+                <article class="kpi kpi-violet"><small>Clientes</small><b>1,320</b><span>↗ 18%</span></article>
+                <article class="kpi kpi-orange"><small>Pedidos</small><b>36</b><span>↗ 9%</span></article>
+              </div>
+              <div class="dash-grid">
+                <article class="chart-card">
+                  <div class="card-head"><b>Ventas de los últimos 30 días</b><span>$12,450</span></div>
+                  <svg class="line-chart" viewBox="0 0 520 210" role="img" aria-label="Gráfico de ventas demostrativo"><defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1597ff" stop-opacity=".45"/><stop offset="1" stop-color="#1597ff" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M20 176 L70 142 L118 150 L160 110 L205 168 L246 124 L288 136 L336 88 L382 104 L430 63 L494 80 L494 196 L20 196 Z" fill="url(#chartFill)"/><path class="chart-line" d="M20 176 L70 142 L118 150 L160 110 L205 168 L246 124 L288 136 L336 88 L382 104 L430 63 L494 80"/><g class="chart-dots"><circle cx="20" cy="176" r="5"/><circle cx="160" cy="110" r="5"/><circle cx="336" cy="88" r="5"/><circle cx="430" cy="63" r="5"/></g></svg>
+                  <div class="chart-labels"><span>1 Nov</span><span>7 Nov</span><span>14 Nov</span><span>21 Nov</span><span>30 Nov</span></div>
+                </article>
+                <article class="products-card"><b>Productos más vendidos</b><ul><li><span class="product-icon">▣</span><span>Laptop Gamer</span><strong>42</strong></li><li><span class="product-icon">▤</span><span>Monitor 24”</span><strong>28</strong></li><li><span class="product-icon">⌨</span><span>Teclado Mecánico</span><strong>27</strong></li><li><span class="product-icon">◉</span><span>Mouse Inalámbrico</span><strong>24</strong></li><li><span class="product-icon">▱</span><span>SSD 1TB</span><strong>19</strong></li></ul></article>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="orbit-node node-web" data-angle="-90" data-radius="182"><strong>WEB</strong><small>Página propia</small></div>
-        <div class="orbit-node node-ig" data-angle="-32" data-radius="212"><strong>IG</strong><small>Contenido visual</small></div>
-        <div class="orbit-node node-fb" data-angle="0" data-radius="220"><strong>FB</strong><small>Comunidad</small></div>
-        <div class="orbit-node node-tt" data-angle="145" data-radius="205"><strong>TT</strong><small>Alcance</small></div>
-        <div class="orbit-node node-wa" data-angle="90" data-radius="184"><strong>WA</strong><small>Respuesta directa</small></div>
-        <div class="orbit-node node-go" data-angle="45" data-radius="208"><strong>GO</strong><small>Búsquedas locales</small></div>
+      </div>
+
+      <div class="hero-plane hero-plane-float" data-parallax="-0.28" aria-hidden="true">
+        <div class="floating-note note-b intro-item" style="--delay:.78s"><span>✓</span><div><b>Tu idea aquí</b><small>puede convertirse en algo real.</small></div></div>
       </div>
     </div>
-  </div>
 
-  <div class="presence-feature-grid reveal">
-    <article>
-      <small>01</small>
-      <h4>DISEÑO QUE CONECTA</h4>
-      <p>Piezas visuales y mensajes pensados para que tu negocio se vea serio, claro y recordable.</p>
-    </article>
-    <article>
-      <small>02</small>
-      <h4>VISIBILIDAD REAL</h4>
-      <p>Tu negocio puede aparecer mejor presentado en búsquedas, redes, WhatsApp y referencias.</p>
-    </article>
-    <article>
-      <small>03</small>
-      <h4>TODO EN UN MISMO SISTEMA</h4>
-      <p>Cuando haga falta, podemos conectar catálogo, reservas, formularios o herramientas internas.</p>
-    </article>
-  </div>
-</section>
-
-<!-- MANIFIESTO / POSICIONAMIENTO -->
-<section class="manifesto section">
-  <div class="manifesto-copy reveal">
-    <span class="eyebrow">NO SE TRATA DE TENER MÁS TECNOLOGÍA</span>
-    <h2>SE TRATA DE HACER QUE TU NEGOCIO <span>FUNCIONE MEJOR.</span></h2>
-    <p>Una buena solución digital empieza entendiendo dónde pierdes tiempo, dónde se escapan clientes, qué información no tienes cuando la necesitas y qué tarea repites todos los días.</p>
-  </div>
-  <div class="principles">
-    <article class="reveal">
-      <em>01</em>
-      <div>
-        <h3>QUE TE ENCUENTREN</h3>
-        <p>Tu presencia digital debe explicar quién eres, qué haces y cómo comprarte sin fricción ni rodeos.</p>
+    <div class="hero-mobile">
+      <div class="mobile-hero-copy intro-item" style="--delay:.08s">
+        <div class="eyebrow">SOLUCIONES DIGITALES A TU MEDIDA</div>
+        <h1>Convierte tus ideas en sistemas que <span>realmente funcionan</span></h1>
+        <p>Páginas web, sistemas, dashboards y automatizaciones para ayudarte a crecer y trabajar con más orden.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/50760124997" target="_blank" rel="noopener">Quiero un proyecto →</a><a class="btn btn-ghost" href="#soluciones">Ver soluciones</a></div>
       </div>
-    </article>
-    <article class="reveal delay-1">
-      <em>02</em>
-      <div>
-        <h3>QUE TODO ESTÉ ORGANIZADO</h3>
-        <p>Pedidos, clientes, citas, inventario y documentos no deberían vivir dispersos en chats o notas en papel.</p>
-      </div>
-    </article>
-    <article class="reveal delay-2">
-      <em>03</em>
-      <div>
-        <h3>QUE PUEDAS DECIDIR</h3>
-        <p>La operación diaria debe convertirse en información clara que puedas entender y utilizar a tu favor.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- MAPA INTERACTIVO: EL NEGOCIO CONECTADO -->
-<section class="ecosystem section" id="ecosistema">
-  <div class="section-head reveal">
-    <span class="eyebrow">EL NEGOCIO CONECTADO</span>
-    <h2>UNA ACCIÓN DEL CLIENTE PUEDE MOVER TODO TU NEGOCIO.</h2>
-    <p>Haz clic en cada etapa del recorrido para descubrir cómo una sola interacción alimenta ventas, operación y decisiones sin trabajo duplicado.</p>
-  </div>
-  <div class="flow-board reveal" id="flowBoard">
-    <button data-node="cliente" class="active"><span>01</span><b>CLIENTE</b><small>Detecta una necesidad</small></button><i>→</i>
-    <button data-node="web"><span>02</span><b>WEB / APP</b><small>Explora y consulta</small></button><i>→</i>
-    <button data-node="pedido"><span>03</span><b>PEDIDO / CITA</b><small>Acción registrada</small></button><i>→</i>
-    <button data-node="pos"><span>04</span><b>POS / AGENDA</b><small>Procesa la venta</small></button><i>→</i>
-    <button data-node="inventario"><span>05</span><b>INVENTARIO</b><small>Descuenta stock</small></button><i>→</i>
-    <button data-node="crm"><span>06</span><b>CRM</b><small>Actualiza cliente</small></button><i>→</i>
-    <button data-node="reportes"><span>07</span><b>REPORTES</b><small>Suma indicadores</small></button><i>→</i>
-    <button data-node="decision"><span>08</span><b>DECISIÓN</b><small>Ajusta estrategia</small></button>
-    <div class="flow-info" id="flowInfo">
-      <small>ETAPA 01 · INTERACCIÓN</small>
-      <b>CLIENTE</b>
-      <p>Todo comienza cuando una persona busca información, quiere agendar una cita o está lista para realizar una compra.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CENTRO DE SOLUCIONES (12 SOLUCIONES) -->
-<section class="solutions section" id="soluciones">
-  <div class="section-head two reveal">
-    <div>
-      <span class="eyebrow">CENTRO DE SOLUCIONES</span>
-      <h2>NO TE LO CUENTO. <span>ENTRA Y PRUÉBALO.</span></h2>
-    </div>
-    <p>Cada solución abre una experiencia interactiva para mostrar qué puede hacer y por qué puede ser útil en un negocio real. Explora las mini aplicaciones en vivo.</p>
-  </div>
-  <div class="filters reveal" id="filters">
-    <button class="active" data-filter="all">TODOS</button>
-    <button data-filter="sales">VENTAS</button>
-    <button data-filter="ops">OPERACIÓN</button>
-    <button data-filter="clients">CLIENTES</button>
-    <button data-filter="experience">EXPERIENCIA</button>
-    <button data-filter="management">GERENCIA</button>
-  </div>
-  <div class="solution-grid bento-grid" id="solutionGrid"></div>
-  <div class="solution-more-wrap" id="solutionMoreWrap" hidden>
-    <button class="solution-more" id="solutionMore" type="button" aria-expanded="false">VER LAS 12 SOLUCIONES</button>
-  </div>
-
-  <div class="single-solution reveal" id="solucion-individual">
-    <div class="single-solution-copy">
-      <span class="eyebrow">¿SOLO NECESITAS UNA HERRAMIENTA?</span>
-      <h3>No tienes que comprar un ecosistema completo.</h3>
-      <p>Podemos construir únicamente el módulo que resuelve tu problema actual y dejarlo listo para crecer más adelante.</p>
-    </div>
-    <div class="single-solution-grid">
-      <article data-open-solution="inventory"><b>Inventario</b><span>Stock, mínimos, movimientos y proveedores.</span><button type="button">VER DEMO</button><a href="https://wa.me/50760124997?text=Hola%20Erik%2C%20solo%20necesito%20un%20sistema%20de%20inventario%20para%20mi%20negocio." target="_blank" rel="noopener">COTIZAR SOLO INVENTARIO</a></article>
-      <article data-open-solution="crm"><b>CRM / Clientes</b><span>Seguimiento, historial y oportunidades comerciales.</span><button type="button">VER DEMO</button><a href="https://wa.me/50760124997?text=Hola%20Erik%2C%20solo%20necesito%20un%20CRM%20para%20mi%20negocio." target="_blank" rel="noopener">COTIZAR SOLO CRM</a></article>
-      <article data-open-solution="pos"><b>POS / Punto de venta</b><span>Ventas rápidas, caja, ITBMS y stock sincronizado.</span><button type="button">VER DEMO</button><a href="https://wa.me/50760124997?text=Hola%20Erik%2C%20solo%20necesito%20un%20POS%20para%20mi%20negocio." target="_blank" rel="noopener">COTIZAR SOLO POS</a></article>
-      <article data-open-solution="app"><b>Aplicación móvil</b><span>Una app para clientes o para tu operación interna.</span><button type="button">VER DEMO</button><a href="https://wa.me/50760124997?text=Hola%20Erik%2C%20quiero%20evaluar%20una%20aplicaci%C3%B3n%20m%C3%B3vil%20para%20mi%20negocio." target="_blank" rel="noopener">COTIZAR SOLO APP</a></article>
-    </div>
-  </div>
-  <noscript><div class="nojs-note">Las demos interactivas necesitan JavaScript. Aun así puedes revisar los servicios y contactar directamente a Erik por WhatsApp al +507 6012-4997.</div></noscript>
-</section>
-
-<!-- INDUSTRIAS -->
-<section class="industries section" id="industrias">
-  <div class="section-head two reveal">
-    <div>
-      <span class="eyebrow">SOLUCIONES SEGÚN TU NEGOCIO</span>
-      <h2>NO TODOS LOS NEGOCIOS NECESITAN LO MISMO.</h2>
-    </div>
-    <p>Podemos empezar por el problema que tenga mayor impacto y conectar nuevas capas cuando realmente aporten valor a tu empresa.</p>
-  </div>
-  <div class="industry-grid" id="industryGrid"></div>
-</section>
-
-<!-- ANTES / DESPUÉS -->
-<section class="before-after section">
-  <div class="section-head reveal">
-    <span class="eyebrow">TRANSFORMACIÓN OPERATIVA</span>
-    <h2>DIGITALIZAR ES CAMBIAR EL RECORRIDO DE TU NEGOCIO.</h2>
-  </div>
-  <div class="scenario-card reveal">
-    <div class="scenario-top">
-      <span id="scenarioCount">01 / 04</span>
-      <div>
-        <button id="prevScenario" aria-label="Anterior caso">←</button>
-        <button id="nextScenario" aria-label="Siguiente caso">→</button>
+      <div class="mobile-dashboard intro-item" style="--delay:.20s">
+        <div class="mobile-dash-head"><span>◆ MicroPCExpress</span><small>DEMO</small></div>
+        <div class="mobile-kpis"><article><small>Ventas</small><b>$12.4K</b></article><article><small>Clientes</small><b>1.3K</b></article><article><small>Pedidos</small><b>36</b></article></div>
+        <div class="mobile-chart"><span></span><span></span><span></span><span></span><span></span><span></span></div>
       </div>
     </div>
-    <div id="scenarioBody">
-      <h3>DE MENSAJES SUELTOS A UN PROCESO ORGANIZADO</h3>
-      <div class="scenario-panels">
-        <article><small>ANTES</small><p>Pedidos por WhatsApp, notas en papel y llamadas dispersas.</p></article>
-        <article><small>DESPUÉS</small><p>Pedido → cliente → inventario → reporte automático.</p></article>
+    <a class="scroll-cue" href="#soluciones" aria-label="Bajar a soluciones"><span>SCROLL</span><i></i></a>
+  </section>
+
+  <section class="creation-lab section-light" id="soluciones">
+    <div class="section-shell">
+      <div class="section-heading center reveal">
+        <span class="section-kicker">PRODUCT STUDIO</span>
+        <h2>¿Qué quieres crear hoy?</h2>
+        <p>Selecciona una solución y mira cómo podría verse aplicada a tu proyecto.</p>
+      </div>
+
+      <div class="solution-tabs reveal" role="tablist" aria-label="Tipos de solución" id="solutionTabs"></div>
+
+      <div class="solution-stage reveal spotlight" id="solutionStage">
+        <div class="spotlight-layer" aria-hidden="true"></div>
+        <div class="solution-copy-panel">
+          <span class="mini-eyebrow" id="solutionEyebrow">PÁGINA WEB</span>
+          <h3 id="solutionTitle">Páginas web que impresionan y convierten</h3>
+          <p id="solutionDescription">Diseños modernos, rápidos y optimizados para que tu negocio destaque en cualquier dispositivo.</p>
+          <ul id="solutionBenefits"></ul>
+          <a class="btn btn-primary magnetic" id="solutionCta" href="#casos">Ver ejemplos de páginas web →</a>
+        </div>
+        <div class="solution-preview-panel" id="solutionPreview" aria-live="polite"></div>
+        <div class="solution-side-list" id="solutionSideList"></div>
+      </div>
+
+      <div class="capability-strip reveal">
+        <div><b>Web</b><span>Presencia que vende</span></div>
+        <div><b>Software</b><span>Procesos conectados</span></div>
+        <div><b>Datos</b><span>Decisiones con claridad</span></div>
+        <div><b>Automatización</b><span>Menos tareas repetitivas</span></div>
       </div>
     </div>
-    <div class="dots" id="scenarioDots"><span class="active"></span><span></span><span></span><span></span></div>
-  </div>
-</section>
+  </section>
 
-<!-- PROCESO & MODOS DE IMPLEMENTACIÓN -->
-<section class="implementation section" id="proceso">
-  <div class="section-head two reveal">
-    <div>
-      <span class="eyebrow">CÓMO PODEMOS EMPEZAR</span>
-      <h2 id="modeTitle">POR ETAPAS, SIN COMPLICARLO.</h2>
-    </div>
-    <button class="mode-switch" id="modeSwitch" role="switch" aria-checked="false">
-      <span>POR ETAPAS</span><i></i><span>ECOSISTEMA COMPLETO</span>
-    </button>
-  </div>
-  <div class="mode-grid" id="modeGrid"></div>
-  <div class="mode-note"><small>Inversión definida según alcance, complejidad y necesidades reales del negocio. Sin tarifas inventadas.</small></div>
-
-  <div class="process-block reveal">
-    <span class="eyebrow">CÓMO TRABAJAMOS</span>
-    <h2>PRIMERO ENTENDEMOS. DESPUÉS CONSTRUIMOS.</h2>
-    <div class="steps" id="steps"></div>
-  </div>
-</section>
-
-<!-- PRECIOS -->
-<section class="pricing section" id="precios">
-  <div class="section-head two reveal">
-    <div>
-      <span class="eyebrow">PAQUETES Y PRECIOS</span>
-      <h2>INVERSIÓN CLARA PARA LANZAR TU <span>VITRINA DIGITAL.</span></h2>
-    </div>
-    <p>No todos los proyectos valen lo mismo, pero sí podemos darte una base clara para empezar. Estos paquetes están pensados para MicroPCExpress y para pequeños negocios que buscan verse profesionales sin entrar en una agencia gigante.</p>
-  </div>
-
-  <div class="market-reference reveal">
-    <b>Referencia rápida del mercado</b>
-    <div class="market-chip-row">
-      <span>Económica / plantilla <strong>$150–$250</strong></span>
-      <span>Básica profesional <strong>$250–$450</strong></span>
-      <span>Profesional <strong>$450–$800</strong></span>
-      <span>Premium <strong>$800–$1,200+</strong></span>
-      <span>Agencia / campaña <strong>$1,200–$2,500+</strong></span>
-    </div>
-    <p>Resumen honesto: el precio sube cuando aumentan el nivel de personalización, la redacción, las animaciones, las integraciones y la estrategia comercial.</p>
-  </div>
-
-  <div class="pricing-grid reveal">
-    <article class="price-card">
-      <small>PARA EMPEZAR</small>
-      <h3>LANDING EXPRESS</h3>
-      <div class="price-line"><span class="currency">US$</span><b>249</b></div>
-      <p>Ideal para emprendedores y pequeños negocios que necesitan una página clara, elegante y con contacto directo.</p>
-      <ul>
-        <li>1 landing page de una sola página</li>
-        <li>Diseño profesional y versión móvil</li>
-        <li>Botón de WhatsApp y formulario básico</li>
-        <li>Secciones esenciales del negocio</li>
-        <li>Entrega rápida</li>
-      </ul>
-      <a class="btn ghost magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20me%20interesa%20el%20paquete%20Landing%20Express%20de%20US%24249." target="_blank" rel="noopener">SOLICITAR EXPRESS</a>
-    </article>
-
-    <article class="price-card featured">
-      <div class="featured-pill">RECOMENDADO ⭐</div>
-      <small>EL MÁS EQUILIBRADO</small>
-      <h3>LANDING PROFESIONAL</h3>
-      <div class="price-line"><span class="currency">US$</span><b>399</b></div>
-      <p>Ideal para negocios establecidos que quieren una imagen más sólida, mejor estructura de ventas y mejor presencia digital.</p>
-      <ul>
-        <li>Diseño más trabajado y personalizado</li>
-        <li>Copy base orientado a ventas</li>
-        <li>WhatsApp, formulario y mapas</li>
-        <li>SEO básico y analítica inicial</li>
-        <li>Animaciones sutiles y mejor presentación visual</li>
-      </ul>
-      <a class="btn primary magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20me%20interesa%20el%20paquete%20Landing%20Profesional%20de%20US%24399." target="_blank" rel="noopener">QUIERO LA PROFESIONAL</a>
-    </article>
-
-    <article class="price-card">
-      <small>VISUAL SUPERIOR</small>
-      <h3>LANDING PREMIUM</h3>
-      <div class="price-line"><span class="currency">US$</span><b>649</b></div>
-      <p>Ideal para empresas que quieren una propuesta visual más potente, secciones más elaboradas y una experiencia con mayor nivel de detalle.</p>
-      <ul>
-        <li>Diseño totalmente a medida</li>
-        <li>Copy, estructura y enfoque de conversión</li>
-        <li>Animaciones más trabajadas</li>
-        <li>Secciones avanzadas y extras visuales</li>
-        <li>Base lista para crecer con más módulos</li>
-      </ul>
-      <a class="btn ghost magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20me%20interesa%20el%20paquete%20Landing%20Premium%20de%20US%24649." target="_blank" rel="noopener">SOLICITAR PREMIUM</a>
-    </article>
-  </div>
-
-  <div class="addons-panel reveal">
-    <div class="addons-copy">
-      <span class="eyebrow">EXTRAS DISPONIBLES</span>
-      <h3>Empieza con una base clara y agrega solo lo que realmente aporta valor.</h3>
-      <p>No hace falta cargar la página con todo desde el día uno. Puedes comenzar por una landing y luego sumar funciones según la necesidad real de tu negocio.</p>
-    </div>
-    <div class="addons-grid">
-      <article><b>Dominio .com</b><span>costo del dominio + US$20–$30 de configuración</span></article>
-      <article><b>Logo básico</b><span>US$50–$100</span></article>
-      <article><b>Redacción de textos</b><span>US$50–$150</span></article>
-      <article><b>Sección adicional compleja</b><span>US$25–$50</span></article>
-      <article><b>Google Analytics</b><span>US$25–$40</span></article>
-      <article><b>Google Maps / Ficha Google</b><span>US$25–$50</span></article>
-      <article><b>Formulario avanzado</b><span>US$40–$75</span></article>
-      <article><b>Reservas o citas</b><span>US$75–$200+</span></article>
-      <article><b>Catálogo de productos</b><span>US$100–$300+</span></article>
-      <article><b>Integración de pagos</b><span>US$150–$300+</span></article>
-      <article><b>Mantenimiento</b><span>US$25–$50 / mes</span></article>
-      <article><b>Cambios posteriores</b><span>US$20–$35 / hora</span></article>
-    </div>
-  </div>
-
-  <div class="pricing-summary reveal">
-    <p><strong>En corto:</strong> si alguien quiere algo funcional y serio para empezar, la referencia es <b>US$249</b>. Si quiere una página más fuerte y más vendedora, <b>US$399</b> es la mejor relación valor / impacto. Y si desea una propuesta más exclusiva y visualmente superior, el punto recomendado es <b>US$649</b>.</p>
-  </div>
-</section>
-
-<!-- DIAGNÓSTICO INTERACTIVO (MINI CONSULTOR) -->
-<section class="diagnosis section" id="diagnostico">
-  <div class="section-head two reveal">
-    <div>
-      <span class="eyebrow">DIAGNÓSTICO INTERACTIVO</span>
-      <h2>¿QUÉ NECESITA TU NEGOCIO?</h2>
-    </div>
-    <p>Selecciona tu tipo de negocio y tus objetivos comerciales u operativos. Nuestra herramienta preparará una recomendación de ecosistema orientativa y el mensaje directo para WhatsApp.</p>
-  </div>
-
-  <div class="diagnosis-app reveal">
-    <div class="diag-form">
-      <label for="businessType">PASO 01 · TIPO DE NEGOCIO</label>
-      <select id="businessType" name="businessType">
-        <option value="">Seleccionar tipo de negocio</option>
-        <option>Restaurante / cafetería</option>
-        <option>Tienda / comercio</option>
-        <option>Clínica / consultorio</option>
-        <option>Farmacia</option>
-        <option>Ferretería</option>
-        <option>Salón / belleza</option>
-        <option>Servicios profesionales</option>
-        <option>Otro tipo de negocio</option>
-      </select>
-
-      <span class="diag-label" id="needsLabel">PASO 02 · ¿QUÉ QUIERES MEJORAR?</span>
-      <div class="need-grid" id="needGrid" role="group" aria-labelledby="needsLabel"></div>
-
-      <label for="clientName">PASO 03 · TU NOMBRE</label>
-      <input id="clientName" name="clientName" autocomplete="name" placeholder="¿Cómo te llamas?" />
-
-      <label for="businessName">PASO 04 · NOMBRE DE TU NEGOCIO</label>
-      <input id="businessName" name="businessName" autocomplete="organization" placeholder="¿Cómo se llama tu empresa o comercio?" />
-
-      <label class="privacy-consent" for="privacyConsent">
-        <input type="checkbox" id="privacyConsent" />
-        <span>Acepto que estos datos se utilicen únicamente para preparar y responder mi solicitud comercial. <button type="button" id="privacyOpen">Ver aviso de privacidad</button>.</span>
-      </label>
-    </div>
-
-    <div class="recommend">
-      <span class="eyebrow">RECOMENDACIÓN ORIENTATIVA</span>
-      <h3>TU ECOSISTEMA SUGERIDO</h3>
-      <div class="tech-estimate-badge" id="techEstimateBadge"><span>⏱ Tiempo est.: <b>2 a 3 semanas</b></span> | <span>⚡ Stack: <b>Next.js + Node</b></span></div>
-      <p class="diag-disclaimer">Esta recomendación es orientativa. No significa que tengas que implementarlo todo. Podemos empezar por la necesidad con mayor impacto.</p>
-      <div class="recommend-list" id="recommendList">
-        <div class="empty">Selecciona tus objetivos para construir la recomendación.</div>
+  <section class="case-lab section section-dark" id="casos">
+    <div class="section-shell">
+      <div class="section-heading reveal">
+        <span class="section-kicker">CASOS DE USO</span>
+        <h2>Mira cómo podría funcionar en tu negocio.</h2>
+        <p>Ejemplos demostrativos: cambia de sector y observa cómo se adapta el enfoque, la interfaz y el recorrido del cliente.</p>
       </div>
-      <button id="diagSend" disabled>LLEVAR MI DIAGNÓSTICO A WHATSAPP ↗</button>
-      <small class="diag-contact-note">Atendido directamente por Erik Coronado · WhatsApp +507 6012-4997</small>
-    </div>
-  </div>
-</section>
 
-<div style="text-align:center;padding:24px;background:#05161e"><a class="btn primary" href="#experiencia-final">VER LA EXPERIENCIA ↓</a></div>
-<!-- Scroll-pinned image reveal -->
-<section class="image-journey" id="experiencia-final" aria-label="Tu idea puede llegar más lejos">
-  <div class="journey-stage">
-  <div class="journey-frame" aria-hidden="true">
-    <picture><source media="(max-width:760px)" srcset="assets/cta-david-1280.webp"><img src="assets/cta-david-4k.webp" alt="" width="3840" height="2160" loading="lazy"></picture>
-  </div>
-  <div class="journey-caption"><span>DE UNA IDEA A TU PRÓXIMO PASO</span><h2>Tu negocio.<br>Sin límites.</h2></div>
-  <a class="journey-hint" href="#contacto">SIGUE BAJANDO <span aria-hidden="true">↓</span></a>
-  <div class="journey-progress" aria-hidden="true"></div>
-  </div>
-</section>
-<!-- CTA FINAL 4K -->
-<section class="closing closing-premium section" id="contacto">
-  <div class="closing-premium-copy">
-    <span class="eyebrow">HAGAMOS CRECER TU NEGOCIO JUNTOS</span>
-    <h2>CUÉNTAME SOBRE TU NEGOCIO.</h2>
-    <p>No necesitas saber de páginas web ni de sistemas. Cuéntame cómo funciona hoy tu negocio, qué te quita tiempo y qué te gustaría mejorar.</p>
-    <div class="closing-contact-list">
-      <span><b>Erik Coronado</b><small>MicroPCExpress Web Digital Services</small></span>
-      <span>☎ +507-6012-4997</span>
-      <span>↗ wa.me/50760124997</span>
-      <span>⌖ David, Chiriquí, Panamá</span>
+      <div class="business-layout">
+        <div class="business-tabs reveal" id="businessTabs" role="tablist" aria-label="Tipos de negocio"></div>
+        <div class="business-demo reveal spotlight" id="businessDemo">
+          <div class="spotlight-layer" aria-hidden="true"></div>
+          <div class="business-copy"><span id="businessType">RESTAURANTE</span><h3 id="businessTitle">Una experiencia digital que vende incluso cuando estás ocupado.</h3><p id="businessDesc"></p><ul id="businessFeatures"></ul><button class="btn btn-ghost business-open" id="businessOpen" type="button">Abrir demo completa ↗</button></div>
+          <div class="business-device" id="businessDevice"></div>
+        </div>
+      </div>
+      <div class="demo-trust reveal">Todas las vitrinas son demostrativas. No se presentan como clientes reales publicados.</div>
     </div>
-    <div class="closing-actions premium-actions">
-      <a class="btn primary magnetic track-whatsapp" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20quiero%20hablar%20con%20MicroPCExpress%20sobre%20mi%20negocio." target="_blank" rel="noopener">HABLA CON ERIK POR WHATSAPP ↗</a>
-      <button class="btn ghost" id="copyContact">COPIAR DATOS DE CONTACTO</button>
-      <span class="contact-status" id="contactStatus" aria-live="polite"></span>
+  </section>
+
+  <section class="marquee-zone" aria-hidden="true">
+    <div class="velocity-marquee" data-marquee data-speed="-22"><div class="marquee-strip">WEB PROFESIONAL · SISTEMAS · DASHBOARDS · RESERVAS · INVENTARIO · AUTOMATIZACIÓN · <span>MICROPCEXPRESS</span> · WEB PROFESIONAL · SISTEMAS · DASHBOARDS · RESERVAS · INVENTARIO · AUTOMATIZACIÓN · <span>MICROPCEXPRESS</span> ·</div></div>
+    <div class="velocity-marquee reverse" data-marquee data-speed="18"><div class="marquee-strip">RESTAURANTES · PANADERÍAS · CLÍNICAS · TIENDAS · FERRETERÍAS · PROFESIONALES · ENTRENADORES PERSONALES · <span>DAVID · CHIRIQUÍ · PANAMÁ</span> · RESTAURANTES · PANADERÍAS · CLÍNICAS · TIENDAS · FERRETERÍAS · PROFESIONALES · ENTRENADORES PERSONALES ·</div></div>
+  </section>
+
+  <section class="digital360 section" id="digital360">
+    <div class="section-shell">
+      <div class="section-heading two-col reveal">
+        <div><span class="section-kicker">PRESENCIA DIGITAL 360°</span><h2>Tu negocio conectado.</h2></div>
+        <p>Web, redes sociales, WhatsApp, Google Business y herramientas internas trabajando como un solo ecosistema.</p>
+      </div>
+      <div class="ecosystem-grid">
+        <div class="ecosystem-copy reveal">
+          <h3>No necesitas estar en todas partes. Necesitas que todo tenga sentido.</h3>
+          <p>Construimos una base digital consistente para que la gente te encuentre, confíe, pregunte y pueda avanzar sin perderse entre canales desconectados.</p>
+          <ul><li>Instagram, Facebook y TikTok con identidad coherente.</li><li>WhatsApp Business como canal directo de conversión.</li><li>Google Business Profile para búsquedas locales.</li><li>Web y sistema listos para crecer con nuevas funciones.</li></ul>
+          <a class="btn btn-primary magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20quiero%20evaluar%20una%20presencia%20digital%20360%20para%20mi%20negocio." target="_blank" rel="noopener">Quiero mi presencia digital →</a>
+        </div>
+        <div class="ecosystem-visual reveal" id="ecosystemVisual">
+          <div class="orbit-ring ring-1"></div><div class="orbit-ring ring-2"></div>
+          <div class="ecosystem-core"><small>MICROPCEXPRESS</small><b>TU NEGOCIO</b><span>Todo conectado</span></div>
+          <button class="orbit-node n-web"><b>WEB</b><span>Página propia</span></button>
+          <button class="orbit-node n-social"><b>REDES</b><span>Visibilidad</span></button>
+          <button class="orbit-node n-wa"><b>WA</b><span>Conversión</span></button>
+          <button class="orbit-node n-google"><b>GOOGLE</b><span>Búsqueda local</span></button>
+          <button class="orbit-node n-system"><b>SISTEMA</b><span>Operación</span></button>
+          <span class="data-packet p1"></span><span class="data-packet p2"></span><span class="data-packet p3"></span>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="motor section section-dark" id="motor">
+    <div class="section-shell">
+      <div class="section-heading reveal">
+        <span class="section-kicker">NO SOLO UNA WEB</span>
+        <h2>Un motor digital para tu negocio.</h2>
+        <p>La página es la entrada. Lo poderoso ocurre cuando conectamos visibilidad, operación y datos.</p>
+      </div>
+      <div class="motor-grid">
+        <article class="motor-card spotlight reveal"><div class="spotlight-layer"></div><span>01</span><h3>Que te encuentren</h3><p>Web + Google + redes sociales para que tu negocio aparezca bien presentado cuando alguien lo busca.</p><div class="mini-ui search-ui"><i></i><b>Tu negocio aparece</b><span>Google · Web · Redes</span></div></article>
+        <article class="motor-card spotlight reveal"><div class="spotlight-layer"></div><span>02</span><h3>Que todo esté organizado</h3><p>Sistemas + inventario + CRM + reservas para reducir tareas manuales y mantener control.</p><div class="mini-ui flow-ui"><i>Cliente</i><b>→</b><i>Sistema</i><b>→</b><i>Acción</i></div></article>
+        <article class="motor-card spotlight reveal"><div class="spotlight-layer"></div><span>03</span><h3>Que puedas decidir</h3><p>Dashboards + datos + métricas para ver qué funciona, detectar problemas y decidir con más claridad.</p><div class="mini-ui bars-ui"><i style="--h:45%"></i><i style="--h:72%"></i><i style="--h:58%"></i><i style="--h:88%"></i><i style="--h:68%"></i></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="process section" id="proceso">
+    <div class="section-shell process-layout">
+      <div class="process-intro reveal"><span class="section-kicker">DE LA IDEA AL LANZAMIENTO</span><h2>Un proceso simple. Resultados con dirección.</h2><p>Nos enfocamos en entender primero el problema y luego construir la solución correcta.</p></div>
+      <div class="process-steps" id="processSteps">
+        <div class="process-rail" aria-hidden="true"><span id="processFill"></span></div>
+        <article class="process-step reveal"><span>01</span><div><h3>Hablamos de tu idea</h3><p>Me cuentas cómo funciona tu negocio, qué te quita tiempo y qué quieres mejorar.</p></div></article>
+        <article class="process-step reveal"><span>02</span><div><h3>Te presentamos una propuesta</h3><p>Definimos alcance, prioridades, tiempos y una ruta clara para comenzar.</p></div></article>
+        <article class="process-step reveal"><span>03</span><div><h3>Desarrollamos tu proyecto</h3><p>Construimos, probamos y ajustamos con escenarios reales de uso.</p></div></article>
+        <article class="process-step reveal"><span>04</span><div><h3>Lo lanzamos y acompañamos</h3><p>Publicamos la solución, te explicamos cómo usarla y dejamos base para crecer.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing section section-light" id="precios">
+    <div class="section-shell">
+      <div class="section-heading center reveal"><span class="section-kicker">INVERSIÓN CLARA</span><h2>Empieza con la landing que necesitas.</h2><p>Precios de referencia para páginas de una sola página. Sistemas y desarrollos especiales se cotizan según alcance.</p></div>
+      <div class="pricing-grid">
+        <article class="price-card spotlight reveal"><div class="spotlight-layer"></div><span class="plan-label">LANDING EXPRESS</span><h3><small>US$</small>249</h3><p>Una presencia profesional para empezar rápido y bien.</p><ul><li>Landing de una página</li><li>Diseño profesional</li><li>Responsive</li><li>WhatsApp</li><li>Formulario básico</li><li>Secciones esenciales</li></ul><a class="btn btn-ghost magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20me%20interesa%20Landing%20Express%20de%20US%24249." target="_blank" rel="noopener">Solicitar Express →</a></article>
+        <article class="price-card featured spotlight reveal"><div class="spotlight-layer"></div><span class="recommended">RECOMENDADO</span><span class="plan-label">LANDING PROFESIONAL</span><h3><small>US$</small>399</h3><p>La mejor relación entre presentación, conversión y funciones.</p><ul><li>Diseño personalizado</li><li>Copy base</li><li>WhatsApp y formulario</li><li>Mapas</li><li>SEO básico</li><li>Analítica inicial</li><li>Animaciones</li></ul><a class="btn btn-primary magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20me%20interesa%20Landing%20Profesional%20de%20US%24399." target="_blank" rel="noopener">Solicitar Profesional →</a></article>
+        <article class="price-card spotlight reveal"><div class="spotlight-layer"></div><span class="plan-label">LANDING PREMIUM</span><h3><small>US$</small>649</h3><p>Una propuesta más exclusiva, visual y preparada para crecer.</p><ul><li>Diseño totalmente personalizado</li><li>Enfoque de conversión</li><li>Animaciones avanzadas</li><li>Secciones especiales</li><li>Módulos visuales</li><li>Base escalable</li></ul><a class="btn btn-ghost magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20me%20interesa%20Landing%20Premium%20de%20US%24649." target="_blank" rel="noopener">Solicitar Premium →</a></article>
+      </div>
+      <div class="extras-panel reveal"><div><span class="section-kicker">EXTRAS</span><h3>Agrega solo lo que aporte valor.</h3></div><div class="extras-chips"><span>Dominio</span><span>Logo</span><span>Copy</span><span>Google Analytics</span><span>Google Maps</span><span>Reservaciones</span><span>Catálogo</span><span>Pagos</span><span>Mantenimiento</span><span>Módulos personalizados</span></div></div>
+    </div>
+  </section>
+
+  <section class="about section" id="sobre">
+    <span class="anchor-alias" id="erik" aria-hidden="true"></span>
+    <div class="section-shell about-grid">
+      <div class="about-image reveal"><img src="assets/erik-portrait-original.jpg" alt="Erik Coronado, MicroPCExpress" loading="lazy" decoding="async" /></div>
+      <div class="about-copy reveal">
+        <span class="section-kicker">SOBRE MICROPCEXPRESS</span>
+        <h2>Tecnología pensada para que tu negocio se vea mejor, trabaje mejor y crezca con orden.</h2>
+        <p><strong>MicroPCExpress Web Digital Services</strong> es una propuesta digital creada en David, Chiriquí, para transformar ideas, procesos y oportunidades en soluciones claras, modernas y útiles. No hacemos tecnología por hacerla: diseñamos páginas web, sistemas, dashboards y automatizaciones que ayudan a vender, organizar y simplificar el trabajo.</p>
+        <p class="about-founder"><strong>Detrás de cada proyecto está Erik Coronado</strong>, acompañando el proceso de forma directa: escuchar primero, entender cómo funciona tu negocio y construir solo lo que realmente aporta valor.</p>
+        <div class="about-facts"><span><b>David, Chiriquí</b><small>Origen y atención directa</small></span><span><b>Web + Software</b><small>Diseño, sistemas y automatización</small></span><span><b>A tu medida</b><small>Soluciones pensadas para tu negocio</small></span></div>
+        <a class="btn btn-primary magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20quiero%20conversar%20sobre%20una%20soluci%C3%B3n%20para%20mi%20negocio." target="_blank" rel="noopener">Hablemos de tu proyecto →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="diagnostic section section-dark" id="diagnostico">
+    <div class="section-shell">
+      <div class="section-heading two-col reveal"><div><span class="section-kicker">DIAGNÓSTICO DIGITAL</span><h2>¿Qué necesita tu negocio?</h2></div><p>Selecciona lo que quieres mejorar. El sistema te prepara una recomendación orientativa y un mensaje listo para WhatsApp.</p></div>
+      <div class="diagnostic-app reveal">
+        <form class="diag-form" id="diagForm" novalidate>
+          <label for="businessType">01 · Tipo de negocio</label>
+          <select id="businessType" name="businessType"><option value="">Seleccionar tipo de negocio</option><option>Restaurante / cafetería</option><option>Panadería</option><option>Zapatería / tienda</option><option>Clínica / consultorio</option><option>Farmacia / ferretería</option><option>Salón / belleza</option><option>Servicios profesionales</option><option>Entrenador personal / fitness</option><option>Otro tipo de negocio</option></select>
+          <fieldset><legend>02 · ¿Qué quieres mejorar?</legend><div class="diag-needs" id="diagNeeds"></div></fieldset>
+          <div class="diag-two"><div><label for="clientName">03 · Tu nombre</label><input id="clientName" name="clientName" autocomplete="name" placeholder="¿Cómo te llamas?" /></div><div><label for="businessName">04 · Tu negocio</label><input id="businessName" name="businessName" autocomplete="organization" placeholder="Nombre del negocio" /></div></div>
+          <label class="consent"><input type="checkbox" id="privacyConsent" /> <span>Acepto que estos datos se utilicen únicamente para responder mi solicitud comercial.</span></label>
+        </form>
+        <aside class="diag-result">
+          <div class="diag-progress"><span id="diagProgress"></span></div>
+          <div class="diag-meta"><span><b id="diagCount">0</b> seleccionadas</span><span id="diagStatus">Completa tu selección</span></div>
+          <span class="section-kicker">RECOMENDACIÓN ORIENTATIVA</span><h3>Tu ecosistema sugerido</h3><div class="recommend-list" id="recommendList"><p class="empty-state">Selecciona al menos una necesidad para construir la recomendación.</p></div>
+          <button class="btn btn-primary" id="diagSend" type="button" disabled>Enviar diagnóstico por WhatsApp →</button>
+          <small>Atendido directamente por Erik Coronado · +507 6012-4997</small>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section" id="contacto">
+    <div class="section-shell contact-grid">
+      <div class="contact-copy reveal"><span class="section-kicker">HABLEMOS DE TU PROYECTO</span><h2>Cuéntame qué quieres mejorar. Yo te ayudo a aterrizarlo.</h2><p>No necesitas saber de páginas web ni de sistemas. Cuéntame cómo funciona hoy tu negocio y qué te gustaría lograr.</p><div class="contact-info"><a href="tel:+50760124997">+507 6012-4997</a><a href="https://wa.me/50760124997" target="_blank" rel="noopener">wa.me/50760124997</a><span>David · Chiriquí · Panamá</span></div></div>
+      <div class="contact-card reveal"><span>MICROPCEXPRESS</span><h3>¿Listo para empezar?</h3><p>Tu idea puede convertirse en una solución real, clara y lista para crecer.</p><a class="btn btn-primary magnetic" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20quiero%20hablar%20sobre%20mi%20proyecto." target="_blank" rel="noopener">Solicita tu proyecto →</a></div>
+    </div>
+  </section>
 </main>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-col-main">
-    <b>MicroPCExpress</b>
-    <small>WEB DIGITAL SERVICES</small>
-    <p>Soluciones digitales para negocios que quieren verse mejor, trabajar mejor y crecer con más control.</p>
-    <span class="footer-person">Responsable: <strong>Erik Coronado</strong></span>
-  </div>
-  <div class="footer-col-links">
-    <b>Navegación</b>
-    <a href="#inicio">Inicio</a>
-    <a href="#soluciones">Soluciones</a>
-    <a href="#presencia-digital">Redes Sociales</a>
-    <a href="#industrias">Industrias</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#precios">Precios</a>
-    <a href="#diagnostico">Diagnóstico</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-  <div class="footer-col-contact">
-    <b>Ubicación & Contacto</b>
-    <span>David · Chiriquí · Panamá</span>
-    <span>WhatsApp: +507 6012-4997</span>
-    <button class="footer-link" id="privacyFooter" type="button">Ver aviso de privacidad</button>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark"><svg viewBox="0 0 42 34"><path d="M3 26.5 13.5 7.8c1.7-3 6-3 7.7 0l5.4 9.6 4.2-7.4c1.7-3 6-3 7.7 0L42 16v10.5h-7.3l-7.5-13.2-6 10.5h-7.6l4.2-7.4-3.3-5.9L5.4 26.5H3Z"/></svg></span><span class="brand-text">MicroPCExpress</span></a><p>Digital Products · Software · Web · Automation</p></div>
+    <div class="footer-links"><a href="#soluciones">Soluciones</a><a href="#casos">Casos de uso</a><a href="#precios">Precios</a><a href="#diagnostico">Diagnóstico</a><a href="#sobre">Sobre MicroPCExpress</a><a href="#contacto">Contacto</a></div>
+    <div class="footer-legal"><span>© <span id="year"></span> MicroPCExpress</span><span>Erik Coronado · David, Chiriquí, Panamá</span><button id="backTop" type="button">Volver arriba ↑</button></div>
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON & BACK TO TOP -->
-<a class="wa magnetic" aria-label="Abrir conversación de WhatsApp con MicroPCExpress (Erik Coronado)" href="https://wa.me/50760124997?text=Hola%20Erik%2C%20vi%20la%20web%20de%20MicroPCExpress." target="_blank" rel="noopener">WA</a>
-<button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
-
-<!-- OVERLAY FULLSCREEN SOLUTION EXPERIENCE LAB -->
-<div class="experience" id="experience" role="dialog" aria-modal="true" aria-label="Demo interactiva de solución" aria-hidden="true">
-  <div class="experience-bar">
-    <div class="brand">
-      <span class="brand-icon">M</span>
-      <span><strong>MicroPCExpress</strong><small id="expCrumb">SOLUCIONES DIGITALES</small></span>
-    </div>
-    <button id="expClose">× VOLVER AL INICIO</button>
-  </div>
-  <div id="experienceContent"></div>
+<div class="demo-modal" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Demo interactiva">
+  <button class="demo-scrim" id="demoScrim" type="button" aria-label="Cerrar demo"></button>
+  <div class="demo-panel"><div class="demo-panel-head"><div><small>MICROPCEXPRESS · DEMO INTERACTIVA</small><b id="demoModalTitle">Caso de uso</b></div><button id="demoClose" type="button" aria-label="Cerrar">×</button></div><iframe id="demoFrame" title="Vista previa demostrativa"></iframe></div>
 </div>
 
-<!-- FULLSCREEN BROWSER PREVIEW -->
-<div class="lightbox-modal preview-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
-  <div class="preview-browser">
-    <div class="preview-browser-bar">
-      <div class="preview-dots"><i></i><i></i><i></i></div>
-      <div class="preview-address"><span>●</span><b id="previewAddress">DEMO INTERACTIVA · MICROPCEXPRESS</b></div>
-      <div class="preview-actions"><button id="previewDesktop" type="button" title="Vista escritorio">▰</button><button id="previewMobile" type="button" title="Vista móvil">▯</button><button class="lightbox-close" id="lightboxClose" aria-label="Cerrar preview">×</button></div>
-    </div>
-    <div class="preview-stage" id="previewStage"><iframe id="lightboxFrame" title="Demo interactiva de sitio web MicroPCExpress" loading="lazy"></iframe></div>
-    <div class="lightbox-caption"><b id="lightboxTitle">Preview Web</b><span id="lightboxCounter">01 / 06</span></div>
-    <button class="lightbox-nav prev" id="lightboxPrev">←</button>
-    <button class="lightbox-nav next" id="lightboxNext">→</button>
-  </div>
-</div>
-
-<!-- PRIVACY MODAL -->
-<div class="privacy-modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle" aria-hidden="true">
-  <button class="privacy-backdrop" id="privacyBackdrop" type="button" aria-label="Cerrar aviso de privacidad"></button>
-  <div class="privacy-card" role="document">
-    <button class="privacy-close" id="privacyClose" aria-label="Cerrar aviso de privacidad">×</button>
-    <span class="eyebrow">PRIVACIDAD</span>
-    <h2 id="privacyTitle">Aviso de Privacidad & Uso de Datos</h2>
-    <p>MicroPCExpress utiliza el nombre, nombre del negocio y necesidades seleccionadas únicamente para preparar y responder tu solicitud comercial.</p>
-    <p>Al continuar hacia WhatsApp, la información seleccionada se incorpora al mensaje que tú decides enviar. Esta versión también conserva temporalmente el último diagnóstico en tu navegador para que puedas recuperarlo si cierras la ventana antes de enviarlo.</p>
-    <p>No se habilitan herramientas de analítica publicitaria ni envío automático a servidores externos sin tu consentimiento expreso.</p>
-    <button class="btn primary" id="privacyAccept" type="button">ENTENDIDO</button>
-  </div>
-</div>
-
-<script src="config.js"></script>
-<script src="analytics.js"></script>
-<script src="assets/vendor/gsap.min.js"></script>
-<script src="assets/vendor/ScrollTrigger.min.js"></script>
-<script src="app.js"></script>
-
-<script id="motion-ultra-js">
-(()=>{
-const body=document.body, toggle=document.getElementById('uToggle');
-let ultra=true;
-toggle?.addEventListener('click',()=>{ultra=!ultra;body.classList.toggle('motion-ultra',ultra);toggle.textContent=ultra?'VER BASE':'VER ULTRA'; if(ultra) resizeCanvas();});
-
-// cursor
-const ring=document.getElementById('uCursor'),dot=document.getElementById('uCursorDot'); let cx=innerWidth/2,cy=innerHeight/2,rx=cx,ry=cy;
-addEventListener('pointermove',e=>{cx=e.clientX;cy=e.clientY;document.documentElement.style.setProperty('--u-mx',(e.clientX/innerWidth*100)+'%');document.documentElement.style.setProperty('--u-my',(e.clientY/innerHeight*100)+'%');if(dot){dot.style.left=cx+'px';dot.style.top=cy+'px'}} ,{passive:true});
-function cursorLoop(){rx+=(cx-rx)*.18;ry+=(cy-ry)*.18;if(ring){ring.style.left=rx+'px';ring.style.top=ry+'px'}requestAnimationFrame(cursorLoop)}cursorLoop();
-document.querySelectorAll('a,button,.u-cardfx').forEach(el=>{el.addEventListener('mouseenter',()=>body.classList.add('u-hover'));el.addEventListener('mouseleave',()=>body.classList.remove('u-hover'))});
-
-// hero 3D parallax
-const vis=document.getElementById('uVisual'),wrap=document.getElementById('uBrowserWrap');
-vis?.addEventListener('pointermove',e=>{if(matchMedia('(pointer:coarse)').matches)return;const r=vis.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;wrap.style.setProperty('--u-ry',(x*8)+'deg');wrap.style.setProperty('--u-rx',(-y*7)+'deg');wrap.style.setProperty('--u-tx',(x*10)+'px');wrap.style.setProperty('--u-ty',(y*8)+'px')});
-vis?.addEventListener('pointerleave',()=>['--u-ry','--u-rx','--u-tx','--u-ty'].forEach(v=>wrap.style.removeProperty(v)));
-
-// card spotlight and reveal
-const cardSel='.why-premium-grid article,.core-service-card,.price-card,.presence-copy,.presence-visual,.market-reference,.scenario-card,.solution-card,.industry-card';
-document.querySelectorAll(cardSel).forEach(el=>{el.classList.add('u-cardfx');el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.setProperty('--cx',(e.clientX-r.left)+'px');el.style.setProperty('--cy',(e.clientY-r.top)+'px')})});
-const revealEls=[...document.querySelectorAll('.section-head,.why-premium-grid article,.core-service-card,.presence-copy,.presence-visual,.price-card,.market-reference,.process-step,.scenario-card')];
-revealEls.forEach((el,i)=>{el.classList.add('u-reveal');el.style.transitionDelay=Math.min((i%4)*70,210)+'ms'});
-const io=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('u-in');io.unobserve(en.target)}}),{threshold:.13,rootMargin:'0px 0px -4% 0px'});revealEls.forEach(el=>io.observe(el));
-
-// magnetic buttons
-if(matchMedia('(hover:hover) and (pointer:fine)').matches){document.querySelectorAll('.magnetic,.hero-actions .btn,.header-cta').forEach(el=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;el.style.transform=`translate(${x*.08}px,${y*.10}px)`});el.addEventListener('pointerleave',()=>el.style.transform='')})}
-
-// canvas particle network - original, lightweight
-const canvas=document.getElementById('uCanvas'),ctx=canvas?.getContext('2d'); let W=0,H=0,dpr=1,pts=[],mouse={x:-9999,y:-9999};
-function resizeCanvas(){if(!canvas||!ctx)return;const r=canvas.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,1.6);W=Math.max(1,Math.floor(r.width));H=Math.max(1,Math.floor(r.height));canvas.width=Math.floor(W*dpr);canvas.height=Math.floor(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);const count=Math.max(34,Math.min(78,Math.floor(W*H/22000)));pts=Array.from({length:count},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*1.5+.45}))}
-canvas?.addEventListener('pointermove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top});canvas?.addEventListener('pointerleave',()=>mouse={x:-9999,y:-9999});
-function draw(){if(ctx&&body.classList.contains('motion-ultra')){ctx.clearRect(0,0,W,H);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;const dx=p.x-mouse.x,dy=p.y-mouse.y,dm=Math.hypot(dx,dy);if(dm<160&&dm>1){p.x+=dx/dm*.12;p.y+=dy/dm*.12}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(114,218,206,.42)';ctx.fill()}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<118){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(114,218,206,${(1-d/118)*.12})`;ctx.lineWidth=.7;ctx.stroke()}}}requestAnimationFrame(draw)}
-resizeCanvas();addEventListener('resize',resizeCanvas,{passive:true});draw();
-
-// MOTION MAX boot
-const boot=document.getElementById('uBoot');const bootSkip=document.getElementById('uBootSkip');
-const closeBoot=()=>boot?.classList.add('off');bootSkip?.addEventListener('click',closeBoot);setTimeout(closeBoot,2250);
-
-// hero counters
-const countEls=[...document.querySelectorAll('[data-mx-count]')];
-const countObs=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,target=+el.dataset.mxCount,dur=1250,start=performance.now();const tick=t=>{const p=Math.min(1,(t-start)/dur),v=Math.round(target*(1-Math.pow(1-p,3)));el.textContent=target===24?v+'/7':target===360?v+'°':v; if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick);countObs.unobserve(el)}),{threshold:.65});countEls.forEach(e=>countObs.observe(e));
-
-// scroll-driven hero energy and story
-const hero=document.querySelector('.hero-premium'),story=document.getElementById('uStory');
-const storySteps=[...document.querySelectorAll('[data-story-step]')],storyScreens=[...document.querySelectorAll('[data-story-screen]')];
-let lastStory=-1;
-function mxScroll(){
-  if(hero&&body.classList.contains('motion-ultra')){const r=hero.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/Math.max(1,r.height*.78)));hero.style.setProperty('--hero-scroll',p);if(wrap)wrap.style.setProperty('--u-scroll-y',(p*55)+'px');}
-  if(story&&body.classList.contains('motion-ultra')){const r=story.getBoundingClientRect(),max=Math.max(1,r.height-innerHeight),p=Math.max(0,Math.min(1,-r.top/max));story.style.setProperty('--story-p',p.toFixed(4));const idx=Math.min(2,Math.floor(p*3.0001));if(idx!==lastStory){lastStory=idx;storySteps.forEach((el,i)=>el.classList.toggle('active',i===idx));storyScreens.forEach((el,i)=>{el.classList.toggle('active',i===idx);el.classList.toggle('prev',i<idx);el.classList.toggle('next',i>idx)})}}
-}
-addEventListener('scroll',mxScroll,{passive:true});mxScroll();
-
-})();
-</script>
+<a class="wa-float magnetic" href="https://wa.me/50760124997" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp"><span>WA</span><b>Hablemos</b></a>
+<script src="app.js" defer></script>
 </body>
 </html>

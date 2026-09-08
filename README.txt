@@ -1,29 +1,44 @@
-MICROPCEXPRESS LANDING ULTIMATE FUSION
+MICROPCEXPRESS NEXTGEN V20 FINAL
+=========================
 
-Versión consolidada 2026.
+Versión reconstruida sobre la base Ultimate v15.4 con la nueva dirección visual tipo Monday.com y el Motion System definido para MicroPCExpress.
 
-Incluye:
-- Hero premium 4K con vitrinas digitales.
-- Secciones Por qué + Servicios de la nueva landing.
-- Manifiesto completo de la versión anterior.
-- Mapa interactivo del negocio conectado.
-- Centro completo de 12 soluciones con filtros.
-- Experience Lab fullscreen con demos interactivas de inventario, POS/eCommerce, CRM, reservas, app móvil, cotizador, dashboard y showroom web.
-- 6 vitrinas web navegables como mini sitios reales, con vista escritorio/móvil.
-- Industrias y ecosistemas sugeridos.
-- Transformación Antes / Después.
-- Implementación por etapas vs ecosistema completo.
-- Proceso completo de 8 etapas.
-- Diagnóstico interactivo con recomendación y WhatsApp.
-- Cierre premium 4K con datos reales de Erik Coronado.
+ARCHIVOS PRINCIPALES
+- index.html
+- styles.css
+- app.js
+- assets/
+- previews/
 
-Contacto:
+INCLUYE
+- Hero tecnológico con dashboard demostrativo animado.
+- Navegación premium + menú fullscreen.
+- Sección interactiva “¿Qué quieres crear hoy?” con 6 soluciones.
+- Casos de uso interactivos con demo modal.
+- Nueva categoría genérica Entrenador personal / Fitness (sin datos ni fotos de Davis).
+- Preview independiente: previews/entrenador.html
+- Presencia Digital 360° con ecosistema animado.
+- Bloque “No solo una web / Un motor digital”.
+- Proceso de 4 pasos con rail de progreso al scroll.
+- Precios US$249 / US$399 / US$649.
+- Diagnóstico digital con recomendación + WhatsApp.
+- Sección Sobre Erik y contacto real de MicroPCExpress.
+- Motion: stagger/reveals, parallax por capas, magnetic buttons, spotlight, velocity marquees y microinteracciones.
+- Reduced motion y composición móvil específica.
+- SEO + OpenGraph + JSON-LD ProfessionalService.
+
+PUBLICACIÓN
+La carpeta es estática. Puede publicarse directamente en Cloudflare Pages/Workers, Vercel, GitHub Pages o cualquier hosting estático.
+
+CONTACTO CONFIGURADO
 Erik Coronado
-WhatsApp +507-6012-4997
+MicroPCExpress Web Digital Services
 David, Chiriquí, Panamá
+WhatsApp: +507 6012-4997
 
-V9 RESPONSIVE
-- Diseño adaptativo optimizado para desktop, tablet y celulares desde 320 px.
-- Menú móvil táctil y accesible.
-- Hero, precios, diagnóstico, soluciones, presencia digital y footer reordenados para móvil.
-- Previews completos abren automáticamente en modo celular cuando la visita proviene de un teléfono.
+
+V20 FINAL — VISUALES APROBADOS
+- Se conservan exclusivamente las imágenes ya aprobadas para Restaurante, Panadería, Zapatería, Clínica, Tienda, Profesional independiente y Entrenador personal.
+- No se agregaron imágenes adicionales.
+- Entrenador personal permanece como demo genérica, sin datos ni fotos de Davis.
+- Se mantiene la corrección de la foto de Erik y del bloque de Automatización.
