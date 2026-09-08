@@ -88,3 +88,10 @@
   .desktop-nav a{font-size:11px}
   .header-cta{padding:11px 14px;font-size:12px}
 }
+
+/* V20.6 — HERO CTA CLICK FIX (surgical)
+   Keep the visual dashboard behind the copy without intercepting pointer events. */
+.hero-plane-copy{z-index:4;pointer-events:none}
+.hero-plane-copy .hero-copy{pointer-events:auto}
+.hero-plane-dashboard{z-index:2;pointer-events:none}
+.hero-plane-float{pointer-events:none}
